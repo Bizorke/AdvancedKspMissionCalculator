@@ -1,0 +1,100 @@
+body{
+	/*background-color: darkgrey;*/
+	background: url("./images/bg.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.container{
+	background-color: white;
+	
+}
+
+.form-control{
+	width: 200px;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.sciencecontainer{
+	white-space: nowrap;
+	height: 70px;
+}
+
+.enginecontainer{
+	display: inline-block;
+	vertical-align: top;
+	background-color: lightblue;
+}
+
+.imgicon{
+	width: 60px;
+	height: 60px;
+	object-fit: contain;
+	
+	display: inline-block;
+	vertical-align: top;
+}
+
+.clickableimgicon{
+	border-style: solid;
+	border-width: 5px;
+	cursor: pointer;
+}
+
+.enabledicon{
+	border-color: green;
+	opacity: 1;
+}
+.disabledicon{
+	border-color: grey;
+	opacity: 0.25;
+}
+
+.engineselectiontier{
+	white-space: nowrap;
+	position: relative;
+}
+
+.engineselectionslide{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.engineselectiontiernumb{
+	position: absolute;
+	top: 0px;
+	bottom: 10px;
+	width: 80px;
+	
+	padding: 10px;
+	background-color: #404040;
+	
+	text-align: center;
+	
+	border-radius: 30px 0px 0px 30px;
+}
+
+.engineselectiontiernumb span{
+	
+	font-size: 20px;
+	font-family: Impact, Charcoal, sans-serif;
+	color: white;
+	
+	display: inline-block;
+	vertical-align: middle;
+	
+	height: 100%;
+}
+
+.engineselectionlist{
+	margin-left: 80px;
+}
+
+.moreoptions{
+	margin-left: 10px;
+	padding-left: 10px;
+	border-left: 2px solid lightblue;
+}
