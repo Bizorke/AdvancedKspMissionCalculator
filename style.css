@@ -98,3 +98,18 @@ body{
 	padding-left: 10px;
 	border-left: 2px solid lightblue;
 }
+
+.panhandling{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	
+	background-color: #ffffcc;
+	color: #4d4d4d;
+	
+	font-weight: bold;
+	font-style: italic;
+	
+	border: 2px solid #cc9900;
+}
