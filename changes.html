@@ -1,0 +1,52 @@
+<! DOCTYPE HTML !>
+
+<html>
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap-theme.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="Sequencr.js"></script>
+<script type="text/javascript" src="dothtml.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80869037-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+	"use strict";
+	$(function(){
+		DOT.do("#body")
+			.div().id("formcontainer").class("container").do()
+				.h1("Changes")
+				.h2("V3 - 2016-07-23")
+					.ul().do()
+						.li("Simulations are now much more precise due to major refactoring, allowing for increased fidelity.")
+						.li("Allow the simulator to try stealing some &Delta;V from the vacuum stage.")
+						.li("Simulations are now much faster due to various optimizations + warp.")
+						.li("Simulations now run until the mission is complete or the payload crashes into the ground.")
+						.li("Better flight plans (colour coded + better descrptions). Green = progress, yellow = jettison, blue = speed, red = bad.")
+						.li("Simulator will now be willing to trade off 1% extra mass for an additional 100 m/s &Delta;V when choosing between two rocket designs.")
+					.end()
+				.h2("V2 - 2016-07-19")
+					.ul().do()
+						.li("Fixed a \"snowball effect\" glitch that caused the simulation to preferentially select more and more massive rockets as the simulation ran.")
+						.li("Fixed bug that hung the app upon two launch simulations being consecutively run in the same session.")
+					.end()
+				.h2("V1 - 2016-07-19")
+					.ul().do()
+						.li("Inital release, supports KSP 1.1.3.")
+					.end()
+			.end();
+	});
+</script>
+<body id="body">
+</body>
+</html>
