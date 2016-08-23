@@ -1,5 +1,9 @@
+//TODO: 
+//number of heat shields added isn't correct. Should add same number as boosters in previous stage, and same size. Instead it adds 1 medium one (probably because of the preceeding parachute stage.)
+//
+
 "use strict";
-var VERSION = 9;
+var VERSION = 10;
 
 var flightInProgress = false;
 
@@ -42,52 +46,46 @@ function readableTime(tt){
 
 $(function(){
 	//Data required for calculations.
-	//scienceTiersIndex = {"1": [], "2": [], "3": [], "4": [], "5": [], "6": [], "7": [], "8": [], "9": []};
-	//scienceTiers = {"1": {}, "2": {}, "3": {}, "4": {}, "5": {}, "6": {}, "7": {}, "8": {}, "9": {}};
-	var massSafetyFactor = 1.1; // 5% mass allowance for overhead.
+	var massSafetyFactor = 1.01; // 1% mass allowance for overhead.
 	var dvByMassConstant = 2;
+	
+	var cookies = Cookies.getJSON("kspcalccookies");
 	
 	//User interface:
 	DOT.do("#body")
 		.div().id("formcontainer").class("container").do()
 			.br().br().b("Joshua Sideris'")
-			.h1().do().h("KSP Mission-Based Rocket Designer").br().i("& Simulator").end()
+			.h1().do().h("Advanced Kerbal Space Program Mission Calculator").br().i("Rocket Designer <b>&bull;</b> Mission Planner <b>&bull;</b> Parachute / Heat Shield / Aerocapture Calculator <b>&bull;</b> Simulator").class("subtitle").end()
 				.a("Version " + VERSION).href("./changes.html").target("_blank")
 				.br()
 				.h("Join the discussion on the ").a("KSP forum").href("http://forum.kerbalspaceprogram.com/index.php?/topic/144121-new-mission-based-rocket-designer-simulator/").target("_blank").h(".")
-				/*.h2("About")
-					.h("This app will help you design a rocket and fly it. Unlike many other tools that typically amount to &Delta;V calculators, this one maskes high-level decisions for you and simulates launch and landing, and gives you a real rocket design you can work with. ")
-					.h("The tool focuses on your mission objectives, automatically optimizing away complex design decisions. ")
-					.h3("Recommended Mods + Tools (Optional)")
-					.ul().do()
-						.li().do()
-							.a("Interstellar Fuel Switch").href("http://mods.curse.com/ksp-mods/kerbal/237233-interstellar-fuel-switch").target("_blank")
-							.h(" - Allows you to change the fuel types in fuel tanks (e.g. from liquid/oxidizer to liquid fuel only). Currently presumed, when simulating the Nerv engine.")
-						.end()
-						.li().do()
-							.del("TweakScale")//.href("http://mods.curse.com/ksp-mods/kerbal/220549-tweakscale").target("_blank")
-							.h(" - Currently not supported (in progress).")
-							//.h(" - Allows you to change the size of fuel tanks and engines.")
-						.end()
-						.li().do()
-							.a("StageRecovery").href("http://kerbal.curseforge.com/projects/stagerecovery").target("_blank")
-							.h(" - Recovers partial funds from jettisoned parts if they have a parachute attached.") 
-							//.h(" Great for recovering expensive, multi-stage booster rockets, which is what they (i.e. NASA) do IRL. I recommend changing the config to disable notification messages.")
-						.end()
-					.end()
-					.br()
-					.h3("Video Tutorial")
-					.div().$css("width", "100%").$css("text-align", "center").do()
-						.h('<iframe width="560" height="315" src="https://www.youtube.com/embed/OCpOVswGqbo" frameborder="0" allowfullscreen></iframe>')
-					.end()
-				.br().br()*/
+				/*
+				.h2("Video Tutorial")
+				.div().$css("width", "100%").$css("text-align", "center").do()
+					.h('<iframe width="560" height="315" src="https://www.youtube.com/embed/OCpOVswGqbo" frameborder="0" allowfullscreen></iframe>')
+				.end()
+				.br()*/
 				.div().$css("width", "100%").$css("text-align", "center").do()
 					.h('<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6712057098655965" data-ad-slot="2959555079"></ins>')
 				.end()
-				.h2("Calculator")
+				.h2("Calculator")	
+					.h3("Enabled Mods")
+					.input().id("includestagerecoverychutes").type("checkbox").if(cookies && cookies.enableStageRecovery, function(){DOT.checked("")})
+						.label().for("includestagerecoverychutes").do()
+							.h("Include stage recovery chutes for boosters jettisoned on Kerbin. Requires the ")
+							.a("StageRecovery").href("http://kerbal.curseforge.com/projects/stagerecovery").target("_blank")
+							.h(" mod.")
+						.end().title("This will add one MK2-R chute to each booster when launching from Kerbin.")
+					.br()
+					.input().id("enableinterstellarfuelswitch").type("checkbox").if(cookies && cookies.enableFuelSwitching, function(){DOT.checked("")})
+						.label().for("enableinterstellarfuelswitch").do()
+							.h("Enable fuel switching. Requires the ")
+							.a("Interstellar Fuel Switch").href("http://mods.curse.com/ksp-mods/kerbal/237233-interstellar-fuel-switch").target("_blank")
+							.h(" mod.")
+						.end().title("Allows fuel tanks to be filled all the way up with liquid fuel, for use with the stock Nerv engine.")
 					.h3("Mission Planner")
-						.label("Initial Payload Mass: ").title("The initial cargo mass that the spacecraft starts with, without accounting for any of the rockets or fuel required to get there. As of version 9 heat sheields are automatically assumed if you're doing any atmospheric entries. Include any payload-specific instruments, sensors, batteries, solar panels, or parachutes though. Don't include the mass of passengers because they are not considered by the game's physics.").for("payloadamount")
-						.input().id("payloadamount").class("form-control").type("number").min(0).required("required").value("1")
+						.label("Initial Payload Mass: ").title("The initial cargo mass that the spacecraft starts with, without accounting for any of the rockets or fuel required to get there. Include any payload-specific instruments, sensors, batteries, solar panels. Don't include parachutes or heat shields because the app adds them for you. Don't include the mass of passengers because they are not considered by the game's physics.").for("payloadamount")
+						.input().id("payloadamount").class("form-control").type("number").min("0").required("required").value("1")
 						.span().class("units").do().h(" T").end()
 						.br()
 						.label("Payload Profile: ").title("The size radius of the payload. This is important for approximating drag, as well as parachute / heat shield reqirements.").for("payloadprofile")
@@ -99,7 +97,6 @@ $(function(){
 							.option("Complex / 10 m").value("10")
 						.end()
 						.br()
-						
 						.table().class("table").do()
 							.tbody().do()
 								.tr().do()
@@ -273,13 +270,19 @@ $(function(){
 													.b("Total Estimated &Delta;V: ").h(readableSpeed(data.rocket.getDv()) + "")
 													.br().br()
 													.b().do()
-														.i("*Calculations done on each stage have a built-in safety factor, assumeing 10% excess mass of their payloads. Use this to add decouplers, nose cones, fins, and stage recovery parachutes.")
+														.i("*Calculations done on each stage have a built-in safety factor, assumeing 1% excess mass of their payloads. Use this to add decouplers, nose cones, fins, control surfaces, landing gear, etc.")
 														.br()
 														.i("*All takeoff calculations assume that each exposed part is covered by a nose cone to reduce drag.")
+														.br()
+														.i("*Use common sense. There might be some optimizations that the algorithm missed since this tool is still in development.")
 														.br()
 														.i().do().h("*Make sure any detachable boosters or fuel tanks chain fuel into more central tanks via fuel ducts in an ").a("\"asparagus\" format").href("http://wiki.kerbalspaceprogram.com/wiki/Asparagus_staging").target("_blank").h(".").end()
 														.br()
 														.i("*You can attach space fuel tanks radially and detach them upon depletion. Be sure to match the takeoff stage's ascent profile for maximal aerodynamics.")
+														.br()
+														.i("*For parachutes, be sure to replace a few of the MK2-Rs with drogue chutes on heavy crafts.")
+														.br()
+														.i("*Report bugs to josh.sideris@gmail.com.")
 													.end()
 											.script(function(){
 												DOT.h2("Launch Simulation & Flight Plan")
@@ -287,7 +290,7 @@ $(function(){
 													var missionSegment = data.mission[i];
 													if(missionSegment.launchEvents){
 														DOT.tr().class("tlmissionmessage").do().td().do()
-															.h("Launch from " + missionSegment.launchPlanet.name)
+															.h("Launch from " + missionSegment.launchPlanet.name + ".")
 															.br()
 															.button("View Flight").class("accordion").$click(function(){
 																$(this).toggleClass("active");
@@ -312,9 +315,22 @@ $(function(){
 															.td(message)
 														.end();	
 													});
-													if(missionSegment.aerocaptureMessage){
+													if(missionSegment.landingSequence.length > 0){
 														DOT.tr().class("tlmissionmessage").do().td().do()
-															.h(missionSegment.aerocaptureMessage)
+															.h("Land on " + missionSegment.landPlanet.name + ".")
+															.br()
+															.button("View Descent").class("accordion").$click(function(){
+																$(this).toggleClass("active");
+																$(this).next().toggleClass("show");
+															})
+															.div().class("panel").do()
+																.table().class("table").do().tbody().do().iterate(missionSegment.landingSequence.length, function(j){
+																	var event = missionSegment.landingSequence[j];
+																	DOT.tr()/*.$css("background-color", event.color)*/.do()
+																		.td(event)
+																	.end();
+																}).end().end()
+															.end()
 														.end().end();
 													}
 													

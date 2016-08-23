@@ -7,6 +7,16 @@ body{
 	background-size: cover;
 }
 
+.subtitle{
+	font-size: 16px;
+}
+
+.subtitle>b{
+	font-size: 24px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
 .container{
 	background-color: white;
 	
