@@ -54,7 +54,7 @@ $(function(){
 	//User interface:
 	DOT.do("#body")
 		.div().id("formcontainer").class("container").do()
-			.br().br().b("Joshua Sideris'")
+			.br().br().h("<a href=\"https://twitter.com/joshsideris\" class=\"twitter-follow-button\" data-show-count=\"false\">Follow @joshsideris</a>").br().br().b("Joshua Sideris'")
 			.h1().do().h("Advanced Kerbal Space Program Mission Calculator").br().i("Rocket Designer <b>&bull;</b> Mission Planner <b>&bull;</b> Parachute / Heat Shield / Aerocapture Calculator <b>&bull;</b> Simulator").class("subtitle").end()
 				.a("Version " + VERSION).href("./changes.html").target("_blank")
 				.br()
