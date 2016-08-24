@@ -164,6 +164,13 @@ function updateMissionPlannerView(){
 					break;
 			}
 			
+			DOT.do("#missionoptions")
+			.div().class("missionoption removelastobjective").do()
+				.h4("Remove Last Objective or Reset")
+				.if(missionPlan.length > 0, function(){DOT.input().class("btn-default").type("button").value("Remove Last Objective").onclick("removeLastObjective();")})
+				.input().class("btn-default").type("button").value("Reset Mission").onclick("resetMission();")
+			.end();
+			
 			if(isLanded){
 				DOT.do("#missionoptions")
 				.div().class("missionoption launchobjective").do()
@@ -185,6 +192,10 @@ function updateMissionPlannerView(){
 				DOT.do("#missionoptions")
 				.div().class("missionoption aerocaptureobjective").do()
 					.h4("Aerocapture via " + currentMissionPlanet.name).title("This maneuver will jettison the current engine and use heat shields to get the spacecraft captured into an unstable orbit, then it will jetisson the heatshield and burn prograde at the new apoapsis to stabilize the orbit. Don't set the new apoapsis too low or high, because simulating an aerocapture will always add a little bit of error. This is a very risky maneuver, with some advantages. Be careful in order to avoid overheating of spacecraft parts. If you don't want to take the risk, use the \"Do Work\" objective to achieve stable orbit.")
+					.if(currentMissionPlanet == planetData.jool, function(){
+						DOT.p("Warning: Jool aerocaptures are extremely volatile and not recommended.").$css("color", "red")
+						.br()
+					})
 					.label().do().h("New Apoapsis: ").end()
 					.for("aerocaptureapoapsis").input().id("aerocaptureapoapsis").class("form-control").type("number").min("0").step("10").value(Math.round((currentMissionPlanet.radius * 5) / 1000)).span().class("units").do().h(" km").end()
 					.br()
@@ -258,12 +269,7 @@ function updateMissionPlannerView(){
 				.input().class("btn-default").type("button").value("Add Objective").onclick("addCargoObjective();")
 			.end();
 			
-			DOT.do("#missionoptions")
-			.div().class("missionoption removelastobjective").do()
-				.h4("Remove Last Objective or Reset")
-				.if(missionPlan.length > 0, function(){DOT.input().class("btn-default").type("button").value("Remove Last Objective").onclick("removeLastObjective();")})
-				.input().class("btn-default").type("button").value("Reset Mission").onclick("resetMission();")
-			.end();
+
 			
 		}
 		
