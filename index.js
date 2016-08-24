@@ -58,7 +58,7 @@ $(function(){
 			.h1().do().h("Advanced Kerbal Space Program Mission Calculator").br().i("Rocket Designer <b>&bull;</b> Mission Planner <b>&bull;</b> Parachute / Heat Shield / Aerocapture Calculator <b>&bull;</b> Simulator").class("subtitle").end()
 				.a("Version " + VERSION).href("./changes.html").target("_blank")
 				.br()
-				.h("Join the discussion on the ").a("KSP forum").href("http://forum.kerbalspaceprogram.com/index.php?/topic/144121-new-mission-based-rocket-designer-simulator/").target("_blank").h(".")
+				.h("Join the discussion on the ").a("KSP forum").href("http://forum.kerbalspaceprogram.com/index.php?/topic/146439-advanced-ksp-mission-tool/").target("_blank").h(".")
 				/*
 				.h2("Video Tutorial")
 				.div().$css("width", "100%").$css("text-align", "center").do()
