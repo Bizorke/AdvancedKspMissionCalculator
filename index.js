@@ -73,6 +73,7 @@ $(function(){
 					.br()
 					.ul().do()
 						.li("Powered landings on Duna instead of using 200 parachutes.")
+						.li("Failed aerocaptures will instead go back and attempt a capture burn.")
 						.li("A link to the rocket/mission plan for future reference (will probably make a new tool for this as well).")
 						.li("Atmospheric launches will follow the prograde vector until reaching the mininmum apoapsis.")
 						.li("Non-atmospheric launches will blast off at a 45 degree angle until reaching the minimum apoapsis.")
