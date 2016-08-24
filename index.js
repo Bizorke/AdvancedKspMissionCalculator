@@ -80,7 +80,7 @@ $(function(){
 						.li("Various display errors will be fixed.")
 					.end()
 					.br()
-					.h("I'm fairly busy with other work this week so maybe I'll push something out mid-to-late next week.")
+					.h("I also recommend turning off ion engines unless you want to have to deal with extremely long and difficult burns (I'm trying to find a good way to deal with this problem automatically). I'm fairly busy with other work this week so maybe I'll push something out mid-to-late next week.")
 				.h2("Calculator")	
 					.h3("Enabled Mods")
 					.input().id("includestagerecoverychutes").type("checkbox").if(cookies && cookies.enableStageRecovery, function(){DOT.checked("")})
@@ -158,7 +158,8 @@ $(function(){
 													.div().id(rocketScience[j].htmlIdName + "-engines").class("enginecontainer").do()
 														.iterate(engines.length, function(k){
 															if(engines[k].science == rocketScience[j].name){
-																DOT.img().id(engines[k].htmlIdName + "-button").src(engines[k].icon).class("imgicon clickableimgicon enabledicon").title(engines[k].name)
+																
+																DOT.img().id(engines[k].htmlIdName + "-button").src(engines[k].icon).class("imgicon clickableimgicon " + (engines[k].name == "Dawn" ? "disabledicon" : "enabledicon")).title(engines[k].name + (engines[k].name == "Dawn" ? " - Warning, the dawn engine is challenging and annoying to use and the calculator has trouble placing it in conveient places. Try to hand-tune use of this engine." : ""))
 																	.$click(function(){
 																		var clicked = $("#" + engines[k].htmlIdName + "-button");
 																		if(clicked.hasClass("enabledicon")){
