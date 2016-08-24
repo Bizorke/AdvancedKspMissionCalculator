@@ -239,7 +239,7 @@ $(function(){
 																						+ (stage.numbRadialBoosterPairs  > 0
 																							? "+ " + stage.numbTanksPerBooster + "&times;" 
 																							+ (stage.numbRadialBoosterPairs * 2) + " radial " : "") 
-																						+ "short " + ceng.radius + " m tanks)")
+																						+ "short " + ceng.radius + " m tanks or equivalent)")
 																					.br()
 																					.h("Detachable Boosters: ").b(stage.numbRadialBoosterPairs * 2)
 																					.br()
