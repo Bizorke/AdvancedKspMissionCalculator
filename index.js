@@ -3,7 +3,7 @@
 //
 
 "use strict";
-var VERSION = 10;
+var VERSION = 11;
 
 var flightInProgress = false;
 
@@ -45,14 +45,34 @@ function readableTime(tt){
 }
 
 $(function(){
+	DOT.do("#body");
+	if(typeof Promise !== "undefined" && Promise.toString().indexOf("[native code]") !== -1){
+	}
+	else{
+		DOT.br().br()
+			.div().do()
+				.h("Your browser does not support the ECMAScript 6 specification (meaning it uses an out-of-date version of JavaScript), and will not be able to run this app. Try updating to a more modern browser like ").a("Google Chrome").href("https://www.google.com/chrome/").target("_blank").h(" or ").a("Firefox").href("https://www.mozilla.org/en-US/firefox/new/").target("_blank").h(".")
+			.end().$css("font-size", "48px").$css("color", "red")
+			.br().br();
+	}
 	//Data required for calculations.
 	var massSafetyFactor = 1.01; // 1% mass allowance for overhead.
 	var dvByMassConstant = 2;
 	
-	var cookies = Cookies.getJSON("kspcalccookies");
+	var rawcookie = document.cookie;
+	var cookies = null;
+	if(rawcookie != ""){
+		cookies = JSON.parse(rawcookie.substring(rawcookie.indexOf("=") + 1, rawcookie.indexOf(";")));
+	}
+	else{
+		cookies = {
+			enableStageRecovery: false,
+			enableFuelSwitching: false
+		}
+	}
 	
 	//User interface:
-	DOT.do("#body")
+	DOT
 		.div().id("formcontainer").class("container").do()
 			.br().br().h("<a href=\"https://twitter.com/joshsideris\" class=\"twitter-follow-button\" data-show-count=\"false\">Follow @joshsideris</a>").br().br().b("Joshua Sideris'")
 			.h1().do().h("Advanced Kerbal Space Program Mission Calculator").br().i("Rocket Designer <b>&bull;</b> Mission Planner <b>&bull;</b> Parachute / Heat Shield / Aerocapture Calculator <b>&bull;</b> Simulator").class("subtitle").end()
@@ -68,19 +88,6 @@ $(function(){
 				.div().$css("width", "100%").$css("text-align", "center").do()
 					.h('<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6712057098655965" data-ad-slot="2959555079"></ins>')
 				.end()
-				.h2("Note to Redditors")
-					.h("After posting a link to this on ").a("Reddit").href("https://www.reddit.com/r/KerbalSpaceProgram/comments/4z9ul9/advanced_ksp_mission_calculator_just_try_it/").target("_blank").h(" I've received tons of great feedback and bug reports. Thanks to this feedback, here is what you can expect for version 11.")
-					.br()
-					.ul().do()
-						.li("Powered landings on Duna instead of using 200 parachutes.")
-						.li("Failed aerocaptures will instead go back and attempt a capture burn.")
-						.li("A link to the rocket/mission plan for future reference (will probably make a new tool for this as well).")
-						.li("Atmospheric launches will follow the prograde vector until reaching the mininmum apoapsis.")
-						.li("Non-atmospheric launches will blast off at a 45 degree angle until reaching the minimum apoapsis.")
-						.li("Various display errors will be fixed.")
-					.end()
-					.br()
-					.h("I also recommend turning off ion engines unless you want to have to deal with extremely long and difficult burns (I'm trying to find a good way to deal with this problem automatically). I'm fairly busy with other work this week so maybe I'll push something out mid-to-late next week.")
 				.h2("Calculator")	
 					.h3("Enabled Mods")
 					.input().id("includestagerecoverychutes").type("checkbox").if(cookies && cookies.enableStageRecovery, function(){DOT.checked("")})
@@ -262,7 +269,7 @@ $(function(){
 																					.br();
 																				})
 																				.if(stage.type == "Parachutes", function(){
-																					DOT.h("MK2-R Chutes: <b>" + (~~stage.getMass() / 100) + "</b>")
+																					DOT.h("MK2-R Chutes: <b>" + (Math.ceil(stage.getMass() * 0.01)) + "</b>")
 																					.br();
 																				})
 																				.if(stage.type == "Heat Shield", function(){

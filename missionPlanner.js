@@ -169,8 +169,8 @@ function updateMissionPlannerView(){
 				.h4("Remove Last Objective or Reset")
 				.if(missionPlan.length > 0, function(){DOT.input().class("btn-default").type("button").value("Remove Last Objective").onclick("removeLastObjective();")})
 				.input().class("btn-default").type("button").value("Reset Mission").onclick("resetMission();")
-			.end();
-			
+			.end()
+			.br();
 			if(isLanded){
 				DOT.do("#missionoptions")
 				.div().class("missionoption launchobjective").do()
