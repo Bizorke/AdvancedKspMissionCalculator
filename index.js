@@ -61,15 +61,18 @@ $(function(){
 	
 	var rawcookie = document.cookie;
 	var cookies = null;
-	if(rawcookie != ""){
-		cookies = JSON.parse(rawcookie.substring(rawcookie.indexOf("=") + 1, rawcookie.indexOf(";")));
-	}
-	else{
-		cookies = {
-			enableStageRecovery: false,
-			enableFuelSwitching: false
+	try{
+		if(rawcookie != ""){
+			cookies = JSON.parse(rawcookie.substring(0, rawcookie.indexOf(";")));
+		}
+		else{
+			cookies = {
+				enableStageRecovery: false,
+				enableFuelSwitching: false
+			}
 		}
 	}
+	catch(e){}
 	
 	//User interface:
 	DOT
