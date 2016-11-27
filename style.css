@@ -1,0 +1,336 @@
+body{
+	/*background-color: darkgrey;*/
+	background: url("./images/bg.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.subtitle{
+	font-size: 16px;
+}
+
+.subtitle>b{
+	font-size: 24px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.container{
+	background-color: white;
+	
+}
+
+.form-control{
+	width: 200px;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.sciencecontainer{
+	white-space: nowrap;
+	height: 70px;
+}
+
+.enginecontainer{
+	display: inline-block;
+	vertical-align: top;
+	background-color: lightblue;
+}
+
+.imgicon{
+	width: 60px;
+	height: 60px;
+	object-fit: contain;
+	
+	display: inline-block;
+	vertical-align: top;
+}
+
+.clickableimgicon{
+	border-style: solid;
+	border-width: 5px;
+	cursor: pointer;
+}
+
+.enabledicon{
+	border-color: green;
+	opacity: 1;
+}
+.disabledicon{
+	border-color: grey;
+	opacity: 0.25;
+}
+
+.engineselectiontier{
+	white-space: nowrap;
+	position: relative;
+}
+
+.engineselectionslide{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.engineselectiontiernumb{
+	position: absolute;
+	top: 0px;
+	bottom: 10px;
+	width: 80px;
+	
+	padding: 10px;
+	background-color: #404040;
+	
+	text-align: center;
+	
+	border-radius: 30px 0px 0px 30px;
+}
+
+.engineselectiontiernumb span{
+	
+	font-size: 20px;
+	font-family: Impact, Charcoal, sans-serif;
+	color: white;
+	
+	display: inline-block;
+	vertical-align: middle;
+	
+	height: 100%;
+}
+
+.engineselectionlist{
+	margin-left: 80px;
+}
+
+.moreoptions{
+	margin-left: 10px;
+	padding-left: 10px;
+	border-left: 2px solid lightblue;
+}
+
+.panhandling{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	
+	background-color: #ffffcc;
+	color: #4d4d4d;
+	
+	font-weight: bold;
+	font-style: italic;
+	
+	border: 2px solid #cc9900;
+}
+
+.missionplanlist{
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+	width: 100%;
+}
+
+.missionplanlist > li{
+	position: relative;
+	margin: 0 0 2px 2em;
+	list-style: none;
+	padding: 10px;
+	/*width: 100%;*/
+	
+	border-style: solid;
+	border-width: 1px;
+	font-weight: bold;
+}
+
+.missionplanlist > li:before{
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+
+.addobjectivebtn{
+	
+}
+
+.missionoption{
+	border-width: 1px;
+	border-style: solid;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 2px;
+}
+
+.refuelobjective,
+.cargoobjective,
+.startobjective{
+	border-color: yellow GoldenRod GoldenRod yellow;
+	background-color: #FFFFEE;
+}
+
+.launchobjective{
+	border-color: lightblue darkblue darkblue lightblue;
+	background-color: #EEEEFF;
+}
+
+.landobjective{
+	border-color: lightgreen darkgreen darkgreen lightgreen;
+	background-color: #EEFFEE;
+}
+
+.aerocaptureobjective{
+	border-color: #90EEEE 	#006464 #006464 #90EEEE;
+	background-color: #EEFFFF;
+}
+
+.escapeobjective{
+	border-color: #99A #223 #223 #99A;
+	background-color: #F4EEFF;	
+}
+
+.workobjective{
+	border-color: #99A #223 #223 #99A;
+	background-color: #D4CCDD;	
+}
+
+.flybyobjective{
+	border-color: #99A #223 #223 #99A;
+	background-color: #B4AABB;
+}
+
+.removelastobjective{
+	border-color: pink darkred darkred pink;
+	background-color: #FFEEEE;
+}
+
+.rocketsegmentlabel{
+	white-space: nowrap;
+	width: 18px;
+	
+	color: white;
+	background-color: #A00;
+	position: relative;
+	/*vertical-align: bottom;*/
+	
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+}
+
+.rocketsegmentlabel > div{
+	/*width: 18px; 
+	height: 100%;*/
+	
+	width: auto;
+	height: auto;
+	
+	transform: translate(-50%, -50%) rotate(-90deg);
+	/*transform-origin: center center 0;*/
+	
+	
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	
+}
+
+.rocketsegmentlabel > div > span{
+	/*width: 100%; height: 100%;*/
+	padding: 2px;
+	font-size: 14px;
+	font-style: italic;
+	/*right: 0px;
+	bottom: 0px;*/
+}
+
+button.accordion {
+    background-color: #DDD;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    background-color: #CCC;
+	
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+div.panel.show {
+    display: block;
+}
+
+.tlmissionmessage{
+	background-color: #EEE;
+	font-weight: bold;
+}
+
+[title]{
+	cursor: help;
+}
+
+#loadingmessage{
+	font-size: 36px;
+}
+
+#calcbtn{
+	padding: 20px;
+	font-size: 48px;
+	color: white;
+	text-shadow: -2px -2px 0px rgba(255,255,255,0.3), 4px 4px 4px rgba(0,0,0,0.8);
+	border-width: 5px;
+	border-style: solid;
+	border-color: #222;
+	transition: 0.4s;
+	background-color: #A00;
+	background: 
+  /* On "top" */
+  repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    #550 10px,
+    #550 20px
+  ),
+  /* on "bottom" */
+  linear-gradient(
+    to bottom,
+    #222,
+    #222
+  );
+}
+
+#calcbtn:hover{
+	background-color: #F00;
+	border-color: #55F;
+  /* On "top" */
+}

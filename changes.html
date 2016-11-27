@@ -1,0 +1,134 @@
+<! DOCTYPE HTML !>
+
+<html>
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<link rel="shortcut icon" href="./favicon.ico" />
+
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap-theme.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="Sequencr.js"></script>
+<script type="text/javascript" src="dothtml.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80869037-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+	"use strict";
+	$(function(){
+		DOT.do("#body")
+			.div().id("formcontainer").class("container").do()
+				.h1("Changes")
+				.h2("V12 - 2016-09-17")
+					.ul().do()
+						.li("Made open source.")
+						.li("Added stage attachments (landing gear, reaction wheels, control surfaces).")
+						.li("A landing gear attachment is added to landing stages. The mass depends on the height of the rocket.")
+						.li("Added control surface attachments for atmospheric launches - enough to control the vessel reasonably.")
+						.li("Added a reaction wheel attachment - enough to control the vessel reasonably.")
+						.li("Added experimental option to force SSTO.")
+						.li("Secretly begun adding a single-stage option. Not complete yet. ")
+						.li("Fixed penalization problem (mainly with dawn engine) resulting in amount of fuel being multiplied many times over. Still not perfect -> limit of 3x fuel for vaccuum stage for a 15 minute burn.")
+						.li("Stage recovery chutes now add multiple chutes per booster, and the number of chutes is now displayed for blastoff and orbital stages.")
+						.li("Re-did display for booster stages. Now shows stats per booster.")
+						.li("")
+						.li("")
+					.end()
+				.h2("V11 - 2016-09-06")
+					.ul().do()
+						.li("Powered landings attempted on atmospheric worlds in case parachute stage is too great.")
+						.li("Failed aerocaptures go back and attempt a capture burn (however this still adds another rocket segment, for technical reasons - this will be addressed in a future version of the app).")
+						.li("Atmospheric launches follow the prograde vector until reaching the mininmum apoapsis.")
+						.li("Non-atmospheric launches blast off at a 45 degree angle until reaching the minimum apoapsis.")
+						.li("Fixed a bug that resulted in unused orbital stages.")
+						.li("Fixed various display errors.")
+						.li("Fixed problems with cookies not saving.")
+					.end()
+				.h2("V10 - 2016-08-23")
+					.ul().do()
+						.li("Added optional stage recovery parachutes to each stage.")
+						.li("Added configurable support for interstellar fuel switch.")
+						.li("Added cookies to save mod preferences.")
+						.li("Added overhead to each stage to account for decouplers, fuel pipes, and stage recovery chutes.")
+						.li("Fixed a bug that caused the rocket builder to skip over some light-weight options.")
+						.li("Updated repository name to \"Advanced KSP Mission Calculator\".")
+					.end()
+				.h2("V9 - 2016-08-21")
+					.ul().do()
+						.li("Added a mission builder, as a new central feature of the app.")
+						.li("Added support for landing.")
+						.li("Added support for towing/releasing cargo (including asteroids) during a mission.")
+						.li("Added built-in support for flybys, &Delta;V changes, escapes, and orbit adjustments.")
+						.li("Added support for aerocaptures.")
+						.li("Rocket designer will now add heatshields and parachutes if necessary.")
+						.li("Added support for multiple mission parts, each with their own set of stages.")
+						.li("Fixed a display bug causing the number of radially attached engines to show as 1.")
+						.li("Added support for setting payload profile.")
+					.end()
+				.h2("V8 - 2016-07-29")
+					.ul().do()
+						.li("Modified the effect of the &Delta;V penalization factor so that penalized rockets are only used if no alternatives exist. Required for multi-part missions, planned for the next update.")
+						.li("Added better procedures to debug and address launches resulting in \"insufficient mission &Delta;V\". Results in higher mission success rates.")
+					.end()
+				.h2("V7 - 2016-07-28")
+					.ul().do()
+						.li("Engines with no bottom-connecting node are no longer considered for use in orbital or takeoff stages.")
+						.li("Prevent rockets from escaping gilly while trying to orbit (set a maximum horizontal thrust).")
+						.li("Modified the algorithm to eliminate many designs earlier in the simulation pipeline by inspection, resulting in far fewer unnecessary simulations being run.")
+						.li("Greaty increased the number of combinations attempted via optimizations, resulting in better rocket designs.")
+						.li().do().h("Added a 1 ms delay between simulations via ").a("Sequencr.js").href("https://github.com/JSideris/Sequencr.js/wiki").target("_blank").h(" so that the app will no longer freeze up during calculations.").end()
+					.end()
+				.h2("V6 - 2016-07-26")
+					.ul().do()
+						.li("Simulator will now try launching missions without a vacuum stage, even when &Delta;V is required. Sometimes offers better performance for launches from low-gravity planets/moons.")
+						.li("Tool will now show total estimated mass and total estimated &Delta;V below the \"best rocket design\" table.")
+					.end()
+				.h2("V5 - 2016-07-25")
+					.ul().do()
+						.li("Fixed bug preventing launch from non-atmospheric planets (aka early-tilt bug).")
+					.end()
+				.h2("V4 - 2016-07-24")
+					.ul().do()
+						.li("Gave simulator the ability to tack more fuel onto the vacuum engine to assist with orbit.")
+						.li("Added orbital stages (3-stage rockets) that will sometimes be explored if the rocket is re-entering the atmosphere too early.")
+					.end()
+				.h2("V3 - 2016-07-23")
+					.ul().do()
+						.li("Allow the simulator to try stealing some &Delta;V from the vacuum stage.")
+						.li("Better flight plans (colour coded + better descrptions). Green = progress, yellow = jettison, blue = speed, red = bad.")
+						.li("Designer may trade off 1% extra mass for an additional 100 m/s &Delta;V when choosing between two rocket designs.")
+						.li("Failed simulations now don't stop until the spacecraft crashes (instead of stopping upon running out of fuel).")
+						.li("Simulations are now much faster due to various optimizations + warp.")
+						.li("Simulations are now much more precise due to major refactoring, allowing for increased fidelity.")
+					.end()
+				.h2("V2 - 2016-07-19")
+					.ul().do()
+						.li("Fixed a \"snowball effect\" glitch that caused the simulation to preferentially select more and more massive rockets as the simulation ran.")
+						.li("Fixed bug that hung the app upon two launch simulations being consecutively run in the same session.")
+					.end()
+				.h2("V1 - 2016-07-19")
+					.ul().do()
+						.li("Inital release, supports KSP 1.1.3.")
+					.end()
+			.end();
+	});
+</script>
+<body id="body">
+</body>
+</html>
