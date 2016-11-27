@@ -1,1 +1,31 @@
-var _0x25d1=["\x73\x75\x63\x63\x65\x73\x73","","\x70\x72\x65\x73\x73\x75\x72\x65","\x72\x61\x64\x69\x75\x73","\x70\x6F\x77","\x6D\x61\x73\x73","\x73\x63\x61\x6C\x65\x48\x65\x69\x67\x68\x74","\x65\x78\x70","\x63\x65\x69\x6C","\x66\x61\x69\x6C","\x54\x68\x65\x20\x73\x70\x61\x63\x65\x63\x72\x61\x66\x74\x20\x63\x6F\x75\x6C\x64\x20\x6E\x6F\x74\x20\x62\x65\x20\x6C\x61\x6E\x64\x65\x64\x20\x77\x69\x74\x68\x20\x70\x61\x72\x61\x63\x68\x75\x74\x65\x73\x2E","\x2E\x2F\x69\x6D\x61\x67\x65\x73\x2F\x6D\x6B\x32\x2D\x72\x2E\x70\x6E\x67"];function calculateParachutes(_0x9b13x2,_0x9b13x3){if(_0x9b13x2== 0){return {status:_0x25d1[0],numbChutes:1,message:_0x25d1[1]}};var _0x9b13x4=0.2;var _0x9b13x5=0;var _0x9b13x6=5;var _0x9b13x7=_0x9b13x2/ 1000;var _0x9b13x8=_0x9b13x3[_0x25d1[2]]/ 1000;var _0x9b13x9=(0.0000484397* _0x9b13x4* _0x9b13x8* Math[_0x25d1[4]]((_0x9b13x5+ _0x9b13x3[_0x25d1[3]]),2)* _0x9b13x7* Math[_0x25d1[4]](_0x9b13x6,2)- G* _0x9b13x3[_0x25d1[5]]* _0x9b13x7* Math[_0x25d1[7]](_0x9b13x5/ _0x9b13x3[_0x25d1[6]]))/ (G* _0x9b13x3[_0x25d1[5]]* Math[_0x25d1[7]](_0x9b13x5/ _0x9b13x3[_0x25d1[6]])- 0.0242198* _0x9b13x8* Math[_0x25d1[4]](_0x9b13x5+ _0x9b13x3[_0x25d1[3]],2)* Math[_0x25d1[4]](_0x9b13x6,2));var _0x9b13xa=Math[_0x25d1[8]](_0x9b13x9/ 0.3);if(_0x9b13x9<= 0&& _0x9b13xa> 0){return {status:_0x25d1[9],message:_0x25d1[10]}}else {return {status:_0x25d1[0],numbChutes:_0x9b13xa,message:_0x25d1[1]}}}var parachuteIcon=_0x25d1[11]
+function calculateParachutes(rocketMass, planet){
+	
+	if(rocketMass == 0){
+		return {status: "success", numbChutes: 1, message: ""};
+	}
+	
+	var drag = 0.2;
+	var elevation = 0;
+	var landingSpeed = 5;
+	var massInTons = rocketMass / 1000;
+	var pressureKpa = planet.pressure / 1000;
+
+
+	var chuteMassT = (0.0000484397 * drag * pressureKpa * Math.pow((elevation + planet.radius), 2) * massInTons * Math.pow(landingSpeed, 2) 
+			- G * planet.mass * massInTons * Math.exp(elevation / planet.scaleHeight)) 
+		/ (G * planet.mass * Math.exp(elevation / planet.scaleHeight) 
+			- 0.0242198 * pressureKpa * Math.pow(elevation + planet.radius, 2) * Math.pow(landingSpeed, 2));
+		
+	//0.3 was experimentally found to be a working value for the radially attached chutes.
+	//They weigh 0.1T each. 
+	var numbChutes = Math.ceil(chuteMassT / 0.3);
+	if (chuteMassT <= 0 && numbChutes > 0){
+		return {status: "fail", message: "The spacecraft could not be landed with parachutes."};
+	}
+	else {
+		
+	    return {status: "success", numbChutes: numbChutes, message: ""};
+	}
+}
+
+var parachuteIcon = "./images/mk2-r.png";

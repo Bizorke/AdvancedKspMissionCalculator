@@ -3,7 +3,7 @@
 //
 
 "use strict";
-var VERSION = 11;
+var VERSION = 12;
 
 var flightInProgress = false;
 
@@ -98,7 +98,7 @@ $(function(){
 							.h("Include stage recovery chutes for boosters jettisoned on Kerbin. Requires the ")
 							.a("StageRecovery").href("http://kerbal.curseforge.com/projects/stagerecovery").target("_blank")
 							.h(" mod.")
-						.end().title("This will add one MK2-R chute to each booster when launching from Kerbin.")
+						.end().title("This will add MK2-R chutes to each booster when launching from Kerbin.")
 					.br()
 					.input().id("enableinterstellarfuelswitch").type("checkbox").if(cookies && cookies.enableFuelSwitching, function(){DOT.checked("")})
 						.label().for("enableinterstellarfuelswitch").do()
@@ -120,6 +120,33 @@ $(function(){
 							.option("Complex / 10 m").value("10")
 						.end()
 						.br()
+						.label("Force Single-Stage-To-Orbit (experimental): ").title("This will force the calculator to only consider rocket desigs that use a single-stage-to-orbit for all planetary or moon launches. Typically these rockets are less mass-efficient, but sometimes cheaper and potentially reusable. If you want to mix-and-match SSTO for a multi-launch mission, break the mission into multiple sub-missions and use latter sub-mission rocket masses as the payload for former sub-missions.")
+						.input().id("force-ssto").type("checkbox").$click(function(){
+							if($("#force-ssto").is(':checked')){
+								$("#force-ss-div").show();
+							}
+							else{
+								$("#force-ss-div").hide();
+							}
+							//toggless();
+						});
+						function toggless(){
+							if($("#force-ssto").is(':checked') && $("#force-ss").is(':checked')){
+								$("#refuelobjective").show(); //TODO: don't use IDs - use classes. Also, hide unsupported options like areocapture.
+							}
+							else{
+								$("#refuelobjective").hide();
+							}
+						}
+						DOT.br()
+						//Warning: this feature is not implemented yet and will lead to hanging. Don't try to uncomment - a significant amount of additional code is required.
+						/*.div().id("force-ss-div").style("display: none;").do()
+							.label("Don't use any staging: ")
+							.input().id("force-ss").type("checkbox").$click(function(){
+								toggless();
+							})
+							.br()
+						.end()*/
 						.table().class("table").do()
 							.tbody().do()
 								.tr().do()
@@ -240,7 +267,23 @@ $(function(){
 																			.end()
 																			.td().do()
 																				.h("Mass: ").b((Math.round(stage.getMass()) / 1000) + " T")
-																			.end();
+																			.end()
+																			/*.td().do()
+																				
+																			.end();*/
+																		})
+																		.elseif(stage.type == "Landing Gear" || stage.type == "Torque", function(){
+																			DOT
+																			.td().do()
+																				.img().src(stage.attachments[0].icon).class("imgicon").title(stage.attachments[0].type)
+																			.end()
+																			.td().do();
+																				for(var a = 0; a < stage.attachments.length; a++){
+																					var attachment = stage.attachments[a];
+																					DOT.h(attachment.type + " &times; " + attachment.count).br()
+																				}
+																				DOT.h("Mass: ").b((Math.round(stage.getMass()) / 1000) + " T")
+																			.end()
 																		})
 																		.else(function(){
 																			DOT
@@ -258,18 +301,28 @@ $(function(){
 																			.td().do()
 																				.if(stage.engine != null || stage.removedEngine != null, function(){
 																					var ceng = stage.engine || stage.removedEngine;
-																					DOT.h("Fuel: ").b(stage.initialFuel + " units").h(" of ").b(stage.fuelType.name)
-																					.h(" (" + stage.numbTanksPerBooster + " central " 
-																						+ (stage.numbRadialBoosterPairs  > 0
-																							? "+ " + stage.numbTanksPerBooster + "&times;" 
-																							+ (stage.numbRadialBoosterPairs * 2) + " radial " : "") 
-																						+ "short " + ceng.radius + " m tanks or equivalent)")
-																					.br()
-																					.h("Detachable Boosters: ").b(stage.numbRadialBoosterPairs * 2)
-																					.br()
-																					.h("Engine: ").b(ceng.name 
-																						+ (stage.engine ? " &times; " + ((stage.numbRadialBoosterPairs * 2 + 1) * stage.numbEnginesPerBooster) : " from previous stage"))
+																					var mainB = stage.mainBooster;
+																					DOT
+																					.h("Booster Configuration: ").b(stage.engine ? ("1 central booster" + (stage.numbRadialBoosterPairs  > 0 ? " + " + (stage.numbRadialBoosterPairs * 2) + " radially-attached boosters": "")) : "extra fuel")
 																					.br();
+																					if(stage.numbRadialBoosterPairs > 0){
+																						DOT.h("Each Booster is as specified below.")
+																						.br()
+																						.div().style("padding-left: 10px; margin-left: 10px; border-left-style: solid; border-left-width: 1px; border-left-color: red;").do()
+																					}
+																					DOT.h("Fuel: ").b(mainB.initialFuelAmount + " units").h(" of ").b(stage.fuelType.name)
+																					.h(" (" + stage.numbTanksPerBooster + " short (" + ceng.minFuelTank + " unit / " + ceng.radius + " m radius) tanks or equivalent)")
+																					.br();
+																					if(mainB.hasStageRecoveryChute){
+																						DOT.h("Stage Recovery Chutes: ").b(mainB.numbSrChutes == -1 ? ("recovery failed") : (mainB.numbSrChutes + " Mk2-R Radial-Mount parachutes or equivalent (" + (mainB.numbSrChutes / 10) + " T)"))
+																						.br()
+																					}
+																					DOT.h("Engine: ").b(ceng.name 
+																						+ (stage.engine ? " &times; " + (stage.numbEnginesPerBooster) : " from previous stage"))
+																					.br();
+																					if(stage.numbRadialBoosterPairs > 0){
+																						DOT.end(); //End the intent.
+																					}
 																				})
 																				.if(stage.type == "Parachutes", function(){
 																					DOT.h("MK2-R Chutes: <b>" + (Math.ceil(stage.getMass() * 0.01)) + "</b>")
@@ -280,8 +333,16 @@ $(function(){
 																					.br();
 																				})
 																				
-																				.h("Estimated mass of stage: ").b((Math.round(stage.getMass()) / 1000) + " T")
-																			.end();
+																				.h("Estimated total mass of stage: ").b((Math.round(stage.getMass()) / 1000) + " T")
+																				/*.br() Ugh. We don't know what planet we're blasting off from here. Will add this feature in a future update.
+																				.h("Estimated TWR of stage: ").b(Math.round(stage.getTwr() * 1000) / 1000)*/
+																			.end()
+																			/*.td().do();
+																				for(var a = 0; a < stage.attachments.length; a++){
+																					var attachment = stage.attachments[a];
+																					DOT.img().src(attachment.icon).class("imgicon").title(attachment.type).h("&times;" + attachment.count)
+																				}
+																			DOT.end()*/
 																		})
 																	.end();
 																});

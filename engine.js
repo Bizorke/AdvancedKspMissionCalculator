@@ -29,7 +29,7 @@ function Fuel(name, density, cost, containerMassRatio){
 var fuels = {};
 fuels["liox"] = new Fuel("Liquid Fuel + Oxidizer", 5, 0.8, 1 / 8);
 fuels["liquidfuel"] = new Fuel("Liquid Fuel", 5, 0.8, (100 / 45) * (1 / 8));
-fuels["xenon"] = new Fuel("Xenon", 0.1, 4, 0.77358490566); //For the PB-X750
+fuels["xenon"] = new Fuel("Xenon", 0.1, 4, 0.78095238095); //For the PB-X750
 
 function Engine(name, mass, aslThrust, vacThrust, fuelType, fuelConsumption, cost, science, icon, builtinFuel, radialSize, vacIsp, hasBottomNode){
 	this.name = name; 
@@ -81,6 +81,8 @@ function Engine(name, mass, aslThrust, vacThrust, fuelType, fuelConsumption, cos
 			break;
 	}
 	if(this.fuelType == fuels["xenon"]){
+		//Override these.
+		this.minFuelTank = 700;
 		this.fuelIcon = "./images/fuelxenontiny.png"
 	}
 	
@@ -91,7 +93,7 @@ var enginesByName = {};
 
 engines.push (new Engine("Ant", 	0.02, 	0.51, 2, fuels["liox"], 0.129, 110, "Propulsion Systems", "./images/ant.png", 0, "Tiny", 315, true));
 engines.push (new Engine("Dart", 	1, 		153.53, 180, fuels["liox"], 10.529, 3850, "Hypersonic Flight", "./images/dart.png", 0, "Small", 340, true));
-engines.push (new Engine("Dawn", 	0.25, 	0.05, 2, fuels["xenon"], 0.485, 8000, "Ion Propulsion", "./images/dawn.png", 0, "Tiny", 4200, true));
+engines.push (new Engine("Dawn", 	0.25, 	0.048, 2, fuels["xenon"], 0.485, 8000, "Ion Propulsion", "./images/dawn.png", 0, "Tiny", 4200, true));
 //engines.push new Engine("Puff", 	0.09, 	9.6, 20, "monopropellent", 2.039, 150, , "./images/puff.png", 0, "Radial Mounted", 250, false));
 engines.push (new Engine("Mainsail",6, 		1379.03, 1500, fuels["liox"], 98.682, 13000, "Heavier Rocketry", "./images/mainsail.png", 0, "Large", 310, true));
 engines.push (new Engine("Mammoth", 15, 	3746, 4000, fuels["liox"], 258.976, 39000, "Very Heavy Rocketry", "./images/mammoth.png", 0, "Extra Large", 315, false));

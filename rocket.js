@@ -1,1 +1,328 @@
-var _0xf2f0=["\x75\x73\x65\x20\x73\x74\x72\x69\x63\x74","\x73\x65\x67\x6D\x65\x6E\x74\x73","\x66\x6C\x69\x67\x68\x74\x52\x65\x63\x6F\x72\x64\x65\x72","\x66\x75\x65\x6C\x44\x65\x70\x6C\x65\x74\x65\x64","\x62\x75\x72\x6E","\x70\x72\x6F\x74\x6F\x74\x79\x70\x65","\x67\x65\x74\x4D\x61\x73\x73","\x67\x65\x74\x43\x75\x72\x72\x65\x6E\x74\x53\x65\x67\x6D\x65\x6E\x74","\x64\x75\x6D\x70","\x67\x65\x74\x43\x75\x72\x72\x65\x6E\x74\x53\x74\x61\x67\x65","\x74\x79\x70\x65","\x50\x61\x72\x61\x63\x68\x75\x74\x65\x73","\x48\x65\x61\x74\x20\x53\x68\x69\x65\x6C\x64","\x50\x61\x79\x6C\x6F\x61\x64","\x4C\x61\x6E\x64","\x4A\x65\x74\x74\x69\x73\x6F\x6E\x20\x74\x68\x65\x20\x63\x65\x6E\x74\x72\x61\x6C\x20\x65\x6E\x67\x69\x6E\x65\x20\x75\x70\x6F\x6E\x20\x65\x78\x68\x61\x75\x73\x74\x69\x6F\x6E\x2E","\x23\x66\x66\x66\x66\x62\x33","\x6C\x6F\x67","\x70\x6F\x70","\x73\x74\x61\x67\x65\x73","\x65\x6E\x67\x69\x6E\x65","\x41\x63\x74\x69\x76\x61\x74\x65\x20\x6E\x65\x78\x74\x20\x73\x74\x61\x67\x65\x2E","\x23\x63\x63\x66\x66\x63\x63","\x73\x74\x61\x67\x65\x30\x4A\x65\x74\x74\x69\x73\x6F\x6E\x65\x64","\x46\x75\x65\x6C\x20\x64\x65\x70\x6C\x65\x74\x69\x6F\x6E\x2E","\x23\x66\x66\x65\x36\x65\x36","\x6C\x65\x6E\x67\x74\x68","\x61\x64\x64\x53\x65\x67\x6D\x65\x6E\x74","\x72\x6F\x63\x6B\x65\x74","\x70\x75\x73\x68","\x61\x64\x64\x53\x74\x61\x67\x65","\x41\x64\x64\x20\x61\x20\x72\x6F\x63\x6B\x65\x74\x20\x73\x65\x67\x6D\x65\x6E\x74\x20\x62\x65\x66\x6F\x72\x65\x20\x61\x64\x64\x69\x6E\x67\x20\x61\x20\x73\x74\x61\x67\x65\x2E","\x67\x65\x74\x46\x75\x65\x6C\x42\x75\x72\x6E\x52\x61\x74\x65","\x67\x65\x74\x54\x68\x72\x75\x73\x74","\x67\x65\x74\x44\x76","\x63\x6C\x6F\x6E\x65","\x67\x65\x74\x53\x70\x61\x63\x65\x44\x76\x4F\x66\x43\x75\x72\x72\x65\x6E\x74\x53\x74\x61\x67\x65","\x4C\x61\x75\x6E\x63\x68","\x5F\x67\x65\x74\x53\x74\x61\x67\x65\x44\x76","\x64\x65\x74\x61\x63\x68\x61\x62\x6C\x65\x42\x6F\x6F\x73\x74\x65\x72\x73","\x66\x75\x65\x6C\x41\x6D\x6F\x75\x6E\x74","\x6D\x61\x69\x6E\x42\x6F\x6F\x73\x74\x65\x72","\x67\x65\x74\x54\x77\x72","\x70\x72\x65\x73\x73\x75\x72\x65","\x67","\x67\x65\x74\x44\x72\x61\x67\x41\x72\x65\x61","\x64\x72\x61\x67\x41\x72\x65\x61","\x68\x65\x61\x74\x53\x68\x69\x65\x6C\x64","\x61\x72\x65\x61","\x6E\x75\x6D\x62\x48\x65\x61\x74\x53\x68\x69\x65\x6C\x64\x73","\x63\x61\x72\x67\x6F\x52\x61\x64\x69\x75\x73","\x75\x70\x64\x61\x74\x65","\x65\x76\x65\x6E\x74\x73","\x66\x6C\x69\x67\x68\x74\x54\x69\x6D\x65","\x72\x6F\x63\x6B\x65\x74\x4D\x61\x73\x73","\x62\x65\x73\x74\x41\x6C\x74\x69\x74\x75\x64\x65","\x62\x65\x73\x74\x4F\x72\x62\x69\x74\x61\x6C\x56\x65\x6C\x6F\x63\x69\x74\x79","\x6D\x69\x73\x73\x69\x6F\x6E\x53\x74\x61\x74\x75\x73","\x50\x65\x6E\x64\x69\x6E\x67","\x65\x78\x74\x72\x61\x4C\x61\x75\x6E\x63\x68\x44\x76","\x61\x6C\x74\x69\x74\x75\x64\x65","\x70\x72\x6F\x62\x6C\x65\x6D\x73","\x74\x65\x72\x6D\x69\x6E\x61\x6C\x56\x57\x61\x72\x6E\x69\x6E\x67\x41\x63\x74\x69\x76\x65","\x6C\x61\x73\x74\x54\x65\x72\x6D\x69\x6E\x61\x6C\x56\x4C\x6F\x67\x67\x65\x64","\x30\x78\x46\x46\x46\x46\x46\x46","\x6C\x6F\x67\x54\x65\x72\x6D\x69\x6E\x61\x6C\x56","\x47\x72\x61\x64\x75\x61\x6C\x6C\x79\x20\x61\x64\x6A\x75\x73\x74\x20\x73\x70\x65\x65\x64\x20\x74\x6F\x20","\x72\x6F\x75\x6E\x64","\x20\x6D\x2F\x73\x20\x62\x79\x20","\x20\x61\x6C\x74\x69\x74\x75\x64\x65\x2E","\x23\x65\x36\x66\x37\x66\x66","\x4B\x65\x65\x70\x20\x73\x70\x65\x65\x64\x20\x62\x65\x6C\x6F\x77\x20","\x53\x70\x65\x65\x64\x20\x75\x70\x2E","\x23\x62\x33\x65\x36\x66\x66","\x72\x65\x63\x6F\x72\x64\x53\x74\x61\x74\x73","\x64\x69\x64\x6E\x74\x47\x65\x74\x4F\x66\x66\x54\x68\x65\x47\x72\x6F\x75\x6E\x64","\x62\x6F\x6F\x73\x74\x65\x72\x46\x75\x65\x6C\x44\x65\x70\x6C\x65\x74\x65\x64\x44\x75\x72\x69\x6E\x67\x41\x73\x63\x65\x6E\x74","\x66\x75\x65\x6C\x44\x65\x70\x6C\x65\x74\x65\x64\x49\x6E\x53\x75\x62\x4F\x72\x62\x69\x74","\x65\x61\x72\x6C\x79\x52\x65\x65\x6E\x74\x72\x79","\x69\x6E\x73\x75\x66\x66\x69\x63\x69\x65\x6E\x74\x4D\x69\x73\x73\x69\x6F\x6E\x44\x76","\x74\x6F\x6F\x4D\x61\x73\x73\x69\x76\x65","\x73\x74\x61\x67\x65\x54\x77\x72\x54\x6F\x6F\x4C\x6F\x77","\x74\x77\x72\x54\x6F\x6F\x4C\x6F\x77","\x6E\x6F\x42\x6F\x74\x74\x6F\x6D\x4E\x6F\x64\x65\x46\x6F\x72\x49\x6E\x74\x65\x72\x6D\x65\x64\x69\x61\x74\x65\x53\x74\x61\x67\x65","\x68\x61\x73\x50\x72\x6F\x62\x6C\x65\x6D"];_0xf2f0[0];function Rocket(){this[_0xf2f0[1]]= [];this[_0xf2f0[2]]=  new FlightRecorder(this);this[_0xf2f0[3]]= false}Rocket[_0xf2f0[5]][_0xf2f0[4]]= function(_0x8929x2,_0x8929x3,_0x8929x4){if(this[_0xf2f0[3]]){return 0};var _0x8929x5=this[_0xf2f0[6]]();var _0x8929x6=this[_0xf2f0[7]]();var _0x8929x7=_0x8929x6[_0xf2f0[4]](_0x8929x2,_0x8929x3,_0x8929x5,_0x8929x4);var _0x8929x8=this[_0xf2f0[6]]();var _0x8929x9=_0x8929x6[_0xf2f0[8]]();if(_0x8929x9== 0){var _0x8929xa=_0x8929x6[_0xf2f0[9]]();if(_0x8929xa!= null&& _0x8929xa[_0xf2f0[10]]!= _0xf2f0[11]&& _0x8929xa[_0xf2f0[10]]!= _0xf2f0[12]&& _0x8929xa[_0xf2f0[10]]!= _0xf2f0[13]&& _0x8929xa[_0xf2f0[10]]!= _0xf2f0[14]){this[_0xf2f0[2]][_0xf2f0[17]](_0xf2f0[15],_0xf2f0[16]);_0x8929x6[_0xf2f0[19]][_0xf2f0[18]]();var _0x8929xb=this[_0xf2f0[9]]();if(_0x8929xb!= null&& _0x8929xb[_0xf2f0[20]]!= null&& _0x8929xb[_0xf2f0[10]]!= _0xf2f0[14]){this[_0xf2f0[2]][_0xf2f0[17]](_0xf2f0[21],_0xf2f0[22]);this[_0xf2f0[2]][_0xf2f0[23]]= true}else {this[_0xf2f0[2]][_0xf2f0[17]](_0xf2f0[24],_0xf2f0[25]);this[_0xf2f0[3]]= true}}};return _0x8929x7/ ((_0x8929x8+ _0x8929x5)/ 2)};Rocket[_0xf2f0[5]][_0xf2f0[6]]= function(){var _0x8929xc=0;for(var _0x8929xd=0;_0x8929xd< this[_0xf2f0[1]][_0xf2f0[26]];_0x8929xd++){_0x8929xc+= this[_0xf2f0[1]][_0x8929xd][_0xf2f0[6]]()};return _0x8929xc};Rocket[_0xf2f0[5]][_0xf2f0[27]]= function(_0x8929x6){_0x8929x6[_0xf2f0[28]]= this;this[_0xf2f0[1]][_0xf2f0[29]](_0x8929x6);return _0x8929x6};Rocket[_0xf2f0[5]][_0xf2f0[7]]= function(){if(this[_0xf2f0[1]]!= null&& this[_0xf2f0[1]][_0xf2f0[26]]> 0){return this[_0xf2f0[1]][this[_0xf2f0[1]][_0xf2f0[26]]- 1]}else {return null}};Rocket[_0xf2f0[5]][_0xf2f0[9]]= function(){var _0x8929xe=null;for(var _0x8929xd=this[_0xf2f0[1]][_0xf2f0[26]]- 1;_0x8929xe== null&& _0x8929xd>= 0;_0x8929xd--){var _0x8929xf=this[_0xf2f0[1]][_0x8929xd];if(_0x8929xf){_0x8929xe= _0x8929xf[_0xf2f0[9]]()}};return _0x8929xe};Rocket[_0xf2f0[5]][_0xf2f0[30]]= function(_0x8929xe){var _0x8929xf=this[_0xf2f0[7]]();if(!_0x8929xf){throw _0xf2f0[31]};_0x8929xf[_0xf2f0[30]](_0x8929xe)};Rocket[_0xf2f0[5]][_0xf2f0[32]]= function(){var _0x8929xa=this[_0xf2f0[9]]();if(_0x8929xa){return _0x8929xa[_0xf2f0[32]]()}else {return 0}};Rocket[_0xf2f0[5]][_0xf2f0[33]]= function(_0x8929x3){var _0x8929xa=this[_0xf2f0[9]]();if(_0x8929xa){return _0x8929xa[_0xf2f0[33]](_0x8929x3)}else {return 0}};Rocket[_0xf2f0[5]][_0xf2f0[34]]= function(){var _0x8929x10=this[_0xf2f0[35]]();var _0x8929x11=0;for(var _0x8929x12=_0x8929x10[_0xf2f0[1]][_0xf2f0[26]]- 1;_0x8929x12>= 0;_0x8929x12--){var _0x8929x6=_0x8929x10[_0xf2f0[1]][_0x8929x12];for(var _0x8929x13=_0x8929x6[_0xf2f0[19]][_0xf2f0[26]]- 1;_0x8929x13>= 0;_0x8929x13--){var _0x8929xe=_0x8929x6[_0xf2f0[19]][_0x8929x13];_0x8929x11+= _0x8929x10._getStageDv(_0x8929xe);_0x8929x6[_0xf2f0[19]][_0xf2f0[18]]()}};return _0x8929x11};Rocket[_0xf2f0[5]][_0xf2f0[36]]= function(){var _0x8929x10=this[_0xf2f0[35]]();var _0x8929x11=0;var _0x8929x6=_0x8929x10[_0xf2f0[7]]();for(var _0x8929x13=_0x8929x6[_0xf2f0[19]][_0xf2f0[26]]- 1;_0x8929x13>= 0;_0x8929x13--){var _0x8929xe=_0x8929x6[_0xf2f0[19]][_0x8929x13];if(_0x8929xe[_0xf2f0[10]]== _0xf2f0[37]){break};_0x8929x11+= _getStageDv(_0x8929xe);_0x8929x10[_0xf2f0[19]][_0xf2f0[18]]()};return _0x8929x11};Rocket[_0xf2f0[5]][_0xf2f0[38]]= function(_0x8929xe){var _0x8929x11=0;for(var _0x8929x14=_0x8929xe[_0xf2f0[39]][_0xf2f0[26]]- 2;_0x8929x14>= 0;_0x8929x14-= 2){var _0x8929x15=_0x8929xe[_0xf2f0[39]][_0x8929x14];var _0x8929x16=_0x8929xe[_0xf2f0[39]][_0x8929x14+ 1];var _0x8929x17=this[_0xf2f0[6]]();var _0x8929x18=this[_0xf2f0[32]]();var _0x8929x19=_0x8929x15[_0xf2f0[40]]+ _0x8929x16[_0xf2f0[40]];var _0x8929x1a=_0x8929x19/ _0x8929x18;_0x8929x15[_0xf2f0[40]]= 0;_0x8929x16[_0xf2f0[40]]= 0;var _0x8929x1b=this[_0xf2f0[6]]();var _0x8929x1c=this[_0xf2f0[33]](0);_0x8929x11+= _0x8929x1a* _0x8929x1c/ ((_0x8929x17+ _0x8929x1b)/ 2);_0x8929xe[_0xf2f0[39]][_0xf2f0[18]]();_0x8929xe[_0xf2f0[39]][_0xf2f0[18]]()};var _0x8929x1d=_0x8929xe[_0xf2f0[41]];if(_0x8929x1d!= null){var _0x8929x17=this[_0xf2f0[6]]();var _0x8929x18=this[_0xf2f0[32]]();var _0x8929x1e=_0x8929x1d[_0xf2f0[40]];var _0x8929x1a=_0x8929x1e/ _0x8929x18;_0x8929x1d[_0xf2f0[40]]= 0;var _0x8929x1b=this[_0xf2f0[6]]();var _0x8929x1c=this[_0xf2f0[33]](0);_0x8929x11+= _0x8929x1a* _0x8929x1c/ ((_0x8929x17+ _0x8929x1b)/ 2)};return _0x8929x11};Rocket[_0xf2f0[5]][_0xf2f0[42]]= function(_0x8929x1f){return this[_0xf2f0[33]](_0x8929x1f[_0xf2f0[43]])/ (_0x8929x1f[_0xf2f0[44]]* this[_0xf2f0[6]]())};Rocket[_0xf2f0[5]][_0xf2f0[45]]= function(){var _0x8929x20=0.1;for(var _0x8929x21=0;_0x8929x21< this[_0xf2f0[1]][_0xf2f0[26]];_0x8929x21++){var _0x8929x6=this[_0xf2f0[1]][_0x8929x21];for(var _0x8929xd=0;_0x8929xd< _0x8929x6[_0xf2f0[19]][_0xf2f0[26]];_0x8929xd++){var _0x8929xe=_0x8929x6[_0xf2f0[19]][_0x8929xd];var _0x8929x22=0;if(_0x8929xe[_0xf2f0[20]]!= null){_0x8929x22+= _0x8929xe[_0xf2f0[20]][_0xf2f0[46]]* (1+ _0x8929x6[_0xf2f0[19]][_0x8929xd][_0xf2f0[39]][_0xf2f0[26]])};if(_0x8929xe[_0xf2f0[47]]!= null){_0x8929x22+= _0x8929xe[_0xf2f0[47]][_0xf2f0[48]]* _0x8929xe[_0xf2f0[49]]};if(_0x8929xe[_0xf2f0[10]]== _0xf2f0[13]){_0x8929x22+= pi* _0x8929xe[_0xf2f0[50]]* _0x8929xe[_0xf2f0[50]]};if(_0x8929x22> _0x8929x20){_0x8929x20= _0x8929x22}}};return _0x8929x20};Rocket[_0xf2f0[5]][_0xf2f0[35]]= function(){var _0x8929x23= new Rocket();for(var _0x8929xd=0;_0x8929xd< this[_0xf2f0[1]][_0xf2f0[26]];_0x8929xd++){var _0x8929x6=this[_0xf2f0[1]][_0x8929xd][_0xf2f0[35]]();_0x8929x23[_0xf2f0[27]](_0x8929x6)};return _0x8929x23};Rocket[_0xf2f0[5]][_0xf2f0[51]]= function(_0x8929x24,_0x8929x25,_0x8929x26){this[_0xf2f0[2]][_0xf2f0[51]](_0x8929x24,_0x8929x25,_0x8929x26)};function FlightRecorder(_0x8929x28){this[_0xf2f0[52]]= [];this[_0xf2f0[53]]= 0;this[_0xf2f0[28]]= _0x8929x28;this[_0xf2f0[54]]= _0x8929x28[_0xf2f0[6]]();this[_0xf2f0[55]]= 0;this[_0xf2f0[56]]= 0;this[_0xf2f0[57]]= _0xf2f0[58];this[_0xf2f0[59]]= 0;this[_0xf2f0[60]]= 0;this[_0xf2f0[23]]= false;this[_0xf2f0[61]]=  new FlightProblems();this[_0xf2f0[62]]= false;this[_0xf2f0[63]]= 0}FlightRecorder[_0xf2f0[5]][_0xf2f0[51]]= function(_0x8929x24,_0x8929x25,_0x8929x26){this[_0xf2f0[53]]+= _0x8929x24;this[_0xf2f0[60]]= _0x8929x25;this[_0xf2f0[56]]= 0;if(_0x8929x25> this[_0xf2f0[55]]){this[_0xf2f0[55]]= this[_0xf2f0[60]]};if(_0x8929x26> this[_0xf2f0[56]]){this[_0xf2f0[56]]= _0x8929x26}};FlightRecorder[_0xf2f0[5]][_0xf2f0[17]]= function(_0x8929x29,_0x8929x2a){this[_0xf2f0[52]][_0xf2f0[29]]({time:this[_0xf2f0[53]],altitude:this[_0xf2f0[60]],message:_0x8929x29,color:(_0x8929x2a|| _0xf2f0[64])})};FlightRecorder[_0xf2f0[5]][_0xf2f0[65]]= function(_0x8929x2b,_0x8929x2c){if(_0x8929x2c> 0&& _0x8929x2c> this[_0xf2f0[63]]* 1.5&& (_0x8929x2b- _0x8929x2c)/ _0x8929x2c< 0.1){if(this[_0xf2f0[62]]){this[_0xf2f0[17]](_0xf2f0[66]+ (Math[_0xf2f0[67]](_0x8929x2b/ 10)* 10)+ _0xf2f0[68]+ readableDistance(Math[_0xf2f0[67]](this[_0xf2f0[60]]/ 100)* 100)+ _0xf2f0[69],_0xf2f0[70])}else {this[_0xf2f0[17]](_0xf2f0[71]+ (Math[_0xf2f0[67]](_0x8929x2b/ 10)* 10)+ _0xf2f0[68]+ readableDistance(Math[_0xf2f0[67]](this[_0xf2f0[60]]/ 100)* 100)+ _0xf2f0[69],_0xf2f0[70]);this[_0xf2f0[62]]= true}}else {if(this[_0xf2f0[62]]){this[_0xf2f0[17]](_0xf2f0[72],_0xf2f0[73]);this[_0xf2f0[62]]= false}}};FlightRecorder[_0xf2f0[5]][_0xf2f0[74]]= function(_0x8929x2d,_0x8929x26){if(_0x8929x2d> this[_0xf2f0[55]]){this[_0xf2f0[55]]= _0x8929x2d};if(_0x8929x26> this[_0xf2f0[56]]){this[_0xf2f0[56]]= _0x8929x26}};function FlightProblems(){this[_0xf2f0[75]]= false;this[_0xf2f0[76]]= false;this[_0xf2f0[77]]= false;this[_0xf2f0[78]]= false;this[_0xf2f0[79]]= false;this[_0xf2f0[80]]= false;this[_0xf2f0[81]]= false;this[_0xf2f0[82]]= false;this[_0xf2f0[83]]= false}FlightProblems[_0xf2f0[5]][_0xf2f0[84]]= function(){return this[_0xf2f0[75]]|| this[_0xf2f0[76]]|| this[_0xf2f0[77]]|| this[_0xf2f0[78]]|| this[_0xf2f0[79]]|| this[_0xf2f0[80]]|| this[_0xf2f0[81]]|| this[_0xf2f0[82]]|| this[_0xf2f0[83]]}
+"use strict";
+
+
+function Rocket(){
+	this.segments = [];
+	this.flightRecorder = new FlightRecorder(this);
+	this.fuelDepleted = false;
+}
+
+//Returns the delta v from the burn.
+//Won't jettison segments.
+//FIXME: TODO: make sure this doesn't waste landing fuel unless absolutely necessary.
+Rocket.prototype.burn = function(time, outsidePressure, maxDesiredDv){
+	if(this.fuelDepleted) return 0;
+	
+	var initialMass = this.getMass();
+	
+	var segment = this.getCurrentSegment();
+	var totalDM = segment.burn(time, outsidePressure, initialMass, maxDesiredDv);
+	
+	var afterMass = this.getMass();
+	
+	var dumpResult = segment.dump(); //Note that dumping will affect the mass because this function also jettisons expended boosters.
+	
+	//Jettison stage.
+	if(dumpResult == 0){
+		var currentStage = segment.getCurrentStage();
+		if(currentStage != null && currentStage.type != "Parachutes" && currentStage.type != "Heat Shield" && currentStage.type != "Payload" && currentStage.type != "Land"){
+			this.flightRecorder.log("Jettison the central engine upon exhaustion.", "#ffffb3");
+			segment.stages.pop();
+			
+			var newCurrentStage = this.getCurrentStage();
+			
+			if(newCurrentStage != null && newCurrentStage.engine != null && newCurrentStage.type != "Land"){
+				this.flightRecorder.log("Activate next stage.", "#ccffcc");
+				this.flightRecorder.stage0Jettisoned = true;
+			}
+			else{
+				this.flightRecorder.log("Fuel depletion.", "#ffe6e6");
+				this.fuelDepleted = true;
+			}
+		}
+		
+	}
+	
+	return totalDM / ((afterMass + initialMass) / 2);
+}
+
+Rocket.prototype.getMass = function(){
+	var m = 0;
+	for(var i = 0; i < this.segments.length; i++){
+		m += this.segments[i].getMass();
+	}
+	return m;
+}
+
+Rocket.prototype.addSegment = function(segment){
+	segment.rocket = this;
+	this.segments.push(segment);
+	return segment;
+}
+
+Rocket.prototype.getCurrentSegment = function(){
+	if(this.segments != null && this.segments.length > 0){
+		return this.segments[this.segments.length - 1];
+	}
+	else{
+		return null;
+	}
+}
+
+Rocket.prototype.getCurrentStage = function(){
+	var stage = null;
+	for(var i = this.segments.length - 1; stage == null && i >= 0; i--){
+		var currentSegment = this.segments[i];
+		if(currentSegment) stage = currentSegment.getCurrentStage();
+	}
+	return stage;
+}
+
+Rocket.prototype.addStage = function(stage){
+	var currentSegment = this.getCurrentSegment();
+	if(!currentSegment){
+		throw "Add a rocket segment before adding a stage.";
+		//currentSegment = this.addSegment(new RocketSegment());
+	}
+	
+	currentSegment.addStage(stage);
+}
+
+Rocket.prototype.getFuelBurnRate = function(){
+	var currentStage = this.getCurrentStage();
+	if(currentStage){
+		return currentStage.getFuelBurnRate();
+	}
+	else{
+		return 0;
+	}
+}
+
+Rocket.prototype.getThrust = function(outsidePressure){
+	var currentStage = this.getCurrentStage();
+	if(currentStage){
+		return currentStage.getThrust(outsidePressure);
+	}
+	else{
+		return 0;
+	}
+}
+
+//Makes a copy of the current rocket and tries to get the dV.
+Rocket.prototype.getDv = function(){
+	var copyR = this.clone();
+	var dv = 0;
+	for(var seg = copyR.segments.length - 1; seg >= 0; seg--){
+		var segment = copyR.segments[seg];
+		for(var s = segment.stages.length - 1; s >= 0; s--){
+			var stage = segment.stages[s];
+			dv += copyR._getStageDv(stage);
+			
+			segment.stages.pop();
+		}
+	}
+	
+	return dv;
+}
+
+//Makes a copy of the current rocket and tries to get the dV.
+Rocket.prototype.getSpaceDvOfCurrentStage = function(){
+	var copyR = this.clone();
+	var dv = 0;
+	var segment = copyR.getCurrentSegment();
+	for(var s = segment.stages.length - 1; s >= 0; s--){
+		var stage = segment.stages[s];
+		if(stage.type == "Launch"){
+			break;
+		}
+		dv += _getStageDv(stage);
+		
+		copyR.stages.pop();
+	}
+	
+	return dv;
+}
+
+Rocket.prototype._getStageDv = function(stage){
+	var dv = 0;
+	for(var p = stage.detachableBoosters.length - 2; p >= 0; p -= 2){
+		//Expend a pair of detachable boosters.
+		var b1 = stage.detachableBoosters[p];
+		var b2 = stage.detachableBoosters[p + 1];
+		var mBefore = this.getMass();
+		var burnRate = this.getFuelBurnRate();
+		var twoBoosterFuel = b1.fuelAmount + b2.fuelAmount;
+		var dt = twoBoosterFuel / burnRate;
+		b1.fuelAmount = 0;
+		b2.fuelAmount = 0;
+		var mAfter = this.getMass();
+		var thrust = this.getThrust(0);
+		
+		dv += dt * thrust / ((mBefore + mAfter) / 2);
+		
+		stage.detachableBoosters.pop();
+		stage.detachableBoosters.pop();
+	}
+	
+	//Central booster.
+	var b = stage.mainBooster;
+	if(b != null){
+		var mBefore = this.getMass();
+		var burnRate = this.getFuelBurnRate();
+		var boosterFuel = b.fuelAmount;
+		var dt = boosterFuel / burnRate;
+		b.fuelAmount = 0;
+		var mAfter = this.getMass();
+		var thrust = this.getThrust(0);
+		
+		dv += dt * thrust / ((mBefore + mAfter) / 2);
+	}
+	return dv;
+}
+
+Rocket.prototype.getTwr = function(planet){
+	return this.getThrust(planet.pressure) / (planet.g * this.getMass());
+}
+
+Rocket.prototype.getDragArea = function(){
+	var largestArea = 0.1;
+	for(var j = 0; j < this.segments.length; j++){
+		var segment = this.segments[j];
+		for(var i = 0; i < segment.stages.length; i++){
+			var stage = segment.stages[i];
+			var a = 0;
+			if(stage.engine != null){
+				a += stage.engine.dragArea * (1 + segment.stages[i].detachableBoosters.length);
+			}
+			if(stage.heatShield != null){
+				a += stage.heatShield.area * stage.numbHeatShields;
+			}
+			if(stage.type == "Payload"){
+				a += pi * stage.cargoRadius * stage.cargoRadius;
+			}
+			if(a > largestArea){
+				largestArea = a;
+			}
+		}
+	}
+	
+	return largestArea;
+}
+
+Rocket.prototype.clone = function(){
+	var newRocket = new Rocket();
+	for(var i = 0; i < this.segments.length; i++){
+		var segment = this.segments[i].clone();
+		newRocket.addSegment(segment);
+	}
+	return newRocket;
+}
+
+Rocket.prototype.update = function(dTime, altitude, orbitalV){
+	this.flightRecorder.update(dTime, altitude, orbitalV);
+}
+
+Rocket.prototype.getTorque = function(){
+	var totalTorque = 0;
+	for(var j = 0; j < this.segments.length; j++){
+		var segment = this.segments[j];
+		for(var i = 0; i < segment.stages.length; i++){
+			var stage = segment.stages[i];
+			totalTorque += stage.getTorque();
+		}
+	}
+	return totalTorque;
+}
+
+function FlightRecorder(rocket){
+	this.events = []; 
+	this.flightTime = 0;
+	this.rocket = rocket;
+	this.rocketMass = rocket.getMass();
+	//this.result = null;
+	this.bestAltitude = 0;
+	this.bestOrbitalVelocity = 0;
+	this.missionStatus = "Pending";
+	this.extraLaunchDv = 0;
+	this.altitude = 0;
+	this.stage0Jettisoned = false;
+	
+	//fates
+	this.problems = new FlightProblems();
+	
+	this.terminalVWarningActive = false;
+	this.lastTerminalVLogged = 0;
+}
+
+FlightRecorder.prototype.update = function(dTime, altitude, orbitalV){
+	this.flightTime += dTime;
+	this.altitude = altitude;
+	this.bestOrbitalVelocity = 0;
+	if(altitude > this.bestAltitude){
+		this.bestAltitude = this.altitude;
+	}
+	if(orbitalV > this.bestOrbitalVelocity){
+		this.bestOrbitalVelocity = orbitalV;
+	}
+}
+
+FlightRecorder.prototype.log = function(message, color){
+	this.events.push({time: this.flightTime, altitude: this.altitude, message: message, color: (color || "0xFFFFFF")});
+}
+
+FlightRecorder.prototype.logTerminalV = function(terminalV, speed){
+	if(speed > 0 && speed > this.lastTerminalVLogged * 1.5 && (terminalV - speed) / speed < 0.1){
+		if(this.terminalVWarningActive){
+			this.log("Gradually adjust speed to " + (Math.round(terminalV / 10) * 10) + " m/s by " + readableDistance(Math.round(this.altitude / 100) * 100) + " altitude.", "#e6f7ff");
+		}
+		else{
+			this.log("Keep speed below " + (Math.round(terminalV / 10) * 10) + " m/s by " + readableDistance(Math.round(this.altitude / 100) * 100) + " altitude.", "#e6f7ff");
+			this.terminalVWarningActive = true;
+		}
+	}
+	else{
+		if(this.terminalVWarningActive){
+			this.log("Speed up.", "#b3e6ff");
+			this.terminalVWarningActive = false;
+		}
+	}
+}
+
+FlightRecorder.prototype.recordStats = function(alt, orbitalV){
+	if(alt > this.bestAltitude){
+		this.bestAltitude = alt;
+	}
+	if(orbitalV > this.bestOrbitalVelocity){
+		this.bestOrbitalVelocity = orbitalV;
+	}
+}
+
+function FlightProblems (){
+	//Flight problems
+	this.didntGetOffTheGround = false;
+	this.boosterFuelDepletedDuringAscent = false;
+	this.fuelDepletedInSubOrbit = false;
+	this.earlyReentry = false;
+	this.insufficientMissionDv = false;
+	
+	//Design problems
+	this.tooMassive = false;
+	this.stageTwrTooLow = false; //This is worse than twrTooLow because adding more boosters won't help.
+	this.twrTooLow = false;
+	this.noBottomNodeForIntermediateStage = false;
+	//this.fuelDepleted = false; //catch all.
+	//this.fuelDepetedDuringAscent = false;
+}
+
+FlightProblems.prototype.hasProblem = function(){
+	return this.didntGetOffTheGround
+		|| this.boosterFuelDepletedDuringAscent
+		|| this.fuelDepletedInSubOrbit
+		|| this.earlyReentry
+		|| this.insufficientMissionDv
+		
+		|| this.tooMassive
+		|| this.stageTwrTooLow
+		|| this.twrTooLow
+		|| this.noBottomNodeForIntermediateStage;
+}

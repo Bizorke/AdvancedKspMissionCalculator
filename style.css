@@ -178,6 +178,7 @@ body{
 	margin-bottom: 2px;
 }
 
+.refuelobjective,
 .cargoobjective,
 .startobjective{
 	border-color: yellow GoldenRod GoldenRod yellow;

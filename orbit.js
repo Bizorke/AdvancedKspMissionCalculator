@@ -1,1 +1,301 @@
-var _0xe9f0=["\x75\x73\x65\x20\x73\x74\x72\x69\x63\x74","\x70\x6C\x61\x6E\x65\x74","\x6D\x75","\x6D\x61\x73\x73","\x70\x65\x72\x69\x61\x70\x73\x69\x73","\x61\x70\x6F\x61\x70\x73\x69\x73","\x70\x72\x69\x6D\x61\x72\x79","\x63\x6C\x6F\x6E\x65","\x70\x72\x6F\x74\x6F\x74\x79\x70\x65","\x73\x65\x74\x41\x70\x6F\x61\x70\x73\x69\x73\x46\x72\x6F\x6D\x53\x70\x65\x65\x64","\x67\x65\x74\x45\x73\x63\x61\x70\x65\x56\x65\x6C\x6F\x63\x69\x74\x79\x41\x74\x44\x69\x73\x74\x61\x6E\x63\x65","\x72\x61\x64\x69\x75\x73","\x67\x65\x74\x52\x61\x64\x69\x61\x6C\x53\x70\x65\x65\x64\x56\x65\x63\x74\x6F\x72\x41\x74\x41\x6C\x74\x69\x74\x75\x64\x65","\x41\x6C\x74\x69\x74\x75\x64\x65\x20\x66\x6F\x72\x20\x74\x68\x69\x73\x20\x63\x61\x6C\x63\x75\x6C\x61\x74\x69\x6F\x6E\x20\x63\x61\x6E\x6E\x6F\x74\x20\x62\x65\x20\x68\x69\x67\x68\x65\x72\x20\x74\x68\x61\x6E\x20\x61\x70\x6F\x61\x70\x73\x69\x73\x2E","\x67\x65\x74\x53\x70\x65\x65\x64\x41\x74\x44\x69\x73\x74\x61\x6E\x63\x65","\x61\x74\x61\x6E\x32","\x73\x71\x72\x74","\x63\x6F\x73","\x73\x69\x6E","\x67\x65\x74\x48\x79\x70\x65\x72\x62\x6F\x6C\x69\x63\x45\x78\x63\x65\x73\x73\x56\x65\x6C\x6F\x63\x69\x74\x79","\x43\x61\x6E\x27\x74\x20\x63\x61\x6C\x63\x75\x6C\x61\x74\x65\x20\x73\x70\x65\x65\x64\x20\x64\x75\x72\x69\x6E\x67\x20\x73\x75\x62\x2D\x6F\x72\x62\x69\x74\x61\x6C\x20\x66\x6C\x69\x67\x68\x74\x2E\x20\x4E\x6F\x74\x20\x69\x6D\x70\x6C\x65\x6D\x65\x6E\x74\x65\x64\x2E","\x43\x61\x6E\x6E\x6F\x74\x20\x63\x61\x6C\x63\x75\x6C\x61\x74\x65\x20\x65\x73\x63\x61\x70\x65\x20\x76\x65\x6C\x6F\x63\x69\x74\x79\x20\x77\x68\x65\x6E\x20\x70\x65\x72\x69\x61\x70\x73\x69\x73\x20\x69\x73\x20\x6E\x6F\x74\x20\x64\x65\x66\x69\x6E\x65\x64\x2E","\x61\x76\x65\x61\x70\x73\x69\x73","\x6F\x72\x62\x69\x74","\x61\x62\x73","\x74\x72\x61\x6E\x73\x6C\x61\x74\x65\x50\x61\x72\x65\x6E\x74\x44\x76\x54\x6F\x4C\x6F\x63\x61\x6C\x44\x76","\x43\x61\x6E\x6E\x6F\x74\x20\x65\x66\x66\x65\x63\x74\x20\x61\x20\x70\x61\x72\x65\x6E\x74\x20\x64\x76\x20\x64\x75\x72\x69\x6E\x67\x20\x73\x75\x62\x2D\x6F\x72\x62\x69\x74\x61\x6C\x20\x66\x6C\x69\x67\x68\x74\x73\x2E","\x65\x66\x66\x65\x63\x74\x50\x61\x72\x65\x6E\x74\x44\x76","\x65\x73\x63\x61\x70\x65","\x73\x65\x74\x41\x70\x6F\x61\x70\x73\x69\x73","\x43\x61\x6E\x27\x74\x20\x65\x73\x63\x61\x70\x65\x20\x69\x66\x20\x70\x65\x72\x69\x61\x70\x73\x69\x73\x20\x69\x73\x20\x6E\x6F\x74\x20\x64\x65\x66\x69\x6E\x65\x64\x2E\x20\x43\x6F\x72\x72\x65\x63\x74\x20\x6F\x72\x62\x69\x74\x20\x66\x69\x72\x73\x74\x2E","\x73\x65\x74\x50\x65\x72\x69\x61\x70\x73\x69\x73","\x66\x69\x78\x41\x70\x73\x65\x73","\x73\x65\x74\x50\x65\x72\x69\x61\x70\x73\x69\x73\x56\x69\x61\x41\x70\x6F\x61\x70\x73\x69\x73","\x43\x61\x6E\x6E\x6F\x74\x20\x73\x65\x74\x20\x70\x65\x72\x69\x61\x70\x73\x69\x73\x20\x76\x69\x61\x20\x61\x70\x6F\x61\x70\x73\x69\x73\x20\x66\x6F\x72\x20\x68\x79\x70\x65\x72\x62\x6F\x6C\x69\x63\x20\x66\x6C\x69\x67\x68\x74\x73\x2E\x20\x4A\x75\x73\x74\x20\x73\x65\x74\x20\x69\x74\x20\x64\x69\x72\x65\x63\x74\x6C\x79\x2E","\x73\x65\x74\x41\x70\x6F\x61\x70\x73\x69\x73\x56\x69\x61\x50\x65\x72\x69\x61\x70\x73\x69\x73","\x43\x61\x6E\x6E\x6F\x74\x20\x73\x65\x74\x20\x61\x70\x6F\x61\x70\x73\x69\x73\x20\x76\x69\x61\x20\x70\x65\x72\x69\x61\x70\x73\x69\x73\x20\x66\x6F\x72\x20\x73\x75\x62\x2D\x6F\x72\x62\x69\x74\x61\x6C\x20\x66\x6C\x69\x67\x68\x74\x73\x2E","\x66\x69\x78\x50\x61\x72\x65\x6E\x74\x4F\x72\x62\x69\x74\x73","\x73\x74\x61\x63\x6B","\x61\x64\x64\x4F\x72\x62\x69\x74","\x6C\x65\x6E\x67\x74\x68","\x6B\x65\x72\x62\x6F\x6C","\x54\x68\x65\x20\x74\x6F\x70\x20\x70\x6C\x61\x6E\x65\x74\x20\x69\x6E\x20\x74\x68\x65\x20\x6F\x72\x62\x69\x74\x20\x73\x74\x61\x63\x6B\x20\x6D\x75\x73\x74\x20\x62\x65\x20\x4B\x65\x72\x62\x6F\x6C\x2E","","\x6E\x61\x6D\x65","\x20\x64\x6F\x65\x73\x20\x6E\x6F\x74\x20\x6F\x72\x62\x69\x74\x20","\x2E","\x70\x75\x73\x68","\x63\x75\x72\x72\x65\x6E\x74\x4F\x72\x62\x69\x74","\x6C\x69\x73\x74"];_0xe9f0[0];function Orbit(planet){this[_0xe9f0[1]]= planet;this[_0xe9f0[2]]= G* this[_0xe9f0[1]][_0xe9f0[3]];this[_0xe9f0[4]]= null;this[_0xe9f0[5]]= null;this[_0xe9f0[6]]= null}Orbit[_0xe9f0[8]][_0xe9f0[7]]= function(){var _0x6bc0x3= new Orbit(this[_0xe9f0[1]]);_0x6bc0x3[_0xe9f0[4]]= this[_0xe9f0[4]];_0x6bc0x3[_0xe9f0[5]]= this[_0xe9f0[5]];return _0x6bc0x3};Orbit[_0xe9f0[8]][_0xe9f0[9]]= function(_0x6bc0x4,_0x6bc0x5){if(_0x6bc0x4> this[_0xe9f0[10]](_0x6bc0x5)){this[_0xe9f0[5]]= null}else {var _0x6bc0x6=this[_0xe9f0[4]]+ this[_0xe9f0[1]][_0xe9f0[11]];this[_0xe9f0[5]]= -_0x6bc0x6- this[_0xe9f0[1]][_0xe9f0[11]]- 2/ ((_0x6bc0x4* _0x6bc0x4/ (G* this[_0xe9f0[1]][_0xe9f0[3]]))- (2/ (_0x6bc0x5+ this[_0xe9f0[1]][_0xe9f0[11]])))}};Orbit[_0xe9f0[8]][_0xe9f0[12]]= function(_0x6bc0x7){if(this[_0xe9f0[5]]!= null&& _0x6bc0x7>= this[_0xe9f0[5]]){throw _0xe9f0[13]};var _0x6bc0x8=_0x6bc0x7+ this[_0xe9f0[1]][_0xe9f0[11]];var _0x6bc0x9=this[_0xe9f0[4]]+ this[_0xe9f0[1]][_0xe9f0[11]];var _0x6bc0xa=this[_0xe9f0[14]](this[_0xe9f0[4]]);var _0x6bc0xb=0;var _0x6bc0xc=_0x6bc0xa;var _0x6bc0xd=_0x6bc0xb;var _0x6bc0xe=1;while(_0x6bc0x9< _0x6bc0x8){var _0x6bc0xf=-(_0x6bc0xe* (G* this[_0xe9f0[1]][_0xe9f0[3]])/ (_0x6bc0x9* _0x6bc0x9));_0x6bc0xb+= _0x6bc0xf;var _0x6bc0x10=(_0x6bc0xa+ _0x6bc0xc)* 0.5;var _0x6bc0x11=(_0x6bc0xb+ _0x6bc0xd)* 0.5;var _0x6bc0x12=_0x6bc0x11* _0x6bc0xe;var _0x6bc0x13=_0x6bc0x10* _0x6bc0xe;var _0x6bc0x14=Math[_0xe9f0[15]](_0x6bc0x13,_0x6bc0x12+ _0x6bc0x9);_0x6bc0x9= Math[_0xe9f0[16]]((_0x6bc0x9+ _0x6bc0x12)* (_0x6bc0x9+ _0x6bc0x12)+ _0x6bc0x13* _0x6bc0x13);var _0x6bc0x15=_0x6bc0xa;var _0x6bc0x16=_0x6bc0xb;_0x6bc0xa= _0x6bc0x15* Math[_0xe9f0[17]](_0x6bc0x14)- _0x6bc0x16* Math[_0xe9f0[18]](_0x6bc0x14);_0x6bc0xb= _0x6bc0x16* Math[_0xe9f0[17]](_0x6bc0x14)+ _0x6bc0x15* Math[_0xe9f0[18]](_0x6bc0x14);_0x6bc0xc= _0x6bc0xa;_0x6bc0xd= _0x6bc0xb};return [_0x6bc0xa,_0x6bc0xb]};Orbit[_0xe9f0[8]][_0xe9f0[14]]= function(_0x6bc0x17){if(this[_0xe9f0[5]]!= null&& this[_0xe9f0[4]]!= null){var _0x6bc0x6=this[_0xe9f0[4]]+ this[_0xe9f0[1]][_0xe9f0[11]];var _0x6bc0x18=_0x6bc0x6+ (this[_0xe9f0[5]]+ this[_0xe9f0[1]][_0xe9f0[11]]);return Math[_0xe9f0[16]](G* this[_0xe9f0[1]][_0xe9f0[3]]* ((2/ (_0x6bc0x17+ this[_0xe9f0[1]][_0xe9f0[11]]))- (2/ (_0x6bc0x18))))}else {if(this[_0xe9f0[4]]!= null){return Math[_0xe9f0[16]](2* G* this[_0xe9f0[1]][_0xe9f0[3]]/ (_0x6bc0x17+ this[_0xe9f0[1]][_0xe9f0[11]]))+ this[_0xe9f0[19]]()}else {if(this[_0xe9f0[5]]!= null){throw _0xe9f0[20]}}}};Orbit[_0xe9f0[8]][_0xe9f0[10]]= function(_0x6bc0x5){if(this[_0xe9f0[4]]== null){throw _0xe9f0[21]};return Math[_0xe9f0[16]](2* G* this[_0xe9f0[1]][_0xe9f0[3]]/ (this[_0xe9f0[1]][_0xe9f0[11]]+ _0x6bc0x5))};Orbit[_0xe9f0[8]][_0xe9f0[19]]= function(){if(this[_0xe9f0[6]]== null){return 0}else {if(this[_0xe9f0[5]]!= null){return 0}else {var _0x6bc0x19=this[_0xe9f0[6]][_0xe9f0[14]](this[_0xe9f0[1]][_0xe9f0[22]]);var _0x6bc0x1a=this[_0xe9f0[1]][_0xe9f0[23]][_0xe9f0[14]](this[_0xe9f0[1]][_0xe9f0[22]]);var _0x6bc0x1b=Math[_0xe9f0[24]](_0x6bc0x19- _0x6bc0x1a);var _0x6bc0x1c=this[_0xe9f0[25]](_0x6bc0x1b);return _0x6bc0x1c}}};Orbit[_0xe9f0[8]][_0xe9f0[25]]= function(_0x6bc0x1d){if(this[_0xe9f0[4]]== null){throw _0xe9f0[26]};var _0x6bc0x1e=this[_0xe9f0[10]](this[_0xe9f0[4]]);return Math[_0xe9f0[16]](_0x6bc0x1e* _0x6bc0x1e+ _0x6bc0x1d* _0x6bc0x1d)- _0x6bc0x1e};Orbit[_0xe9f0[8]][_0xe9f0[27]]= function(_0x6bc0x1d){var _0x6bc0x1f=this[_0xe9f0[25]](_0x6bc0x1d);return _0x6bc0x1f};Orbit[_0xe9f0[8]][_0xe9f0[28]]= function(){if(this[_0xe9f0[5]]== null){return 0}else {if(this[_0xe9f0[4]]!= null){var _0x6bc0x1e=this[_0xe9f0[10]](this[_0xe9f0[4]]);var _0x6bc0x20=this[_0xe9f0[14]](this[_0xe9f0[4]]);var _0x6bc0x1f=_0x6bc0x1e- _0x6bc0x20;this[_0xe9f0[29]](null);return _0x6bc0x1f}else {throw _0xe9f0[30]}}};Orbit[_0xe9f0[8]][_0xe9f0[31]]= function(_0x6bc0x21){this[_0xe9f0[4]]= _0x6bc0x21;this[_0xe9f0[32]]()};Orbit[_0xe9f0[8]][_0xe9f0[29]]= function(_0x6bc0x21){this[_0xe9f0[5]]= _0x6bc0x21;this[_0xe9f0[32]]()};Orbit[_0xe9f0[8]][_0xe9f0[33]]= function(_0x6bc0x21){if(this[_0xe9f0[5]]== null){throw _0xe9f0[34]};var _0x6bc0x22=this[_0xe9f0[14]](this[_0xe9f0[5]]);this[_0xe9f0[4]]= _0x6bc0x21;var _0x6bc0x23=this[_0xe9f0[14]](this[_0xe9f0[5]]);return Math[_0xe9f0[24]](_0x6bc0x23- _0x6bc0x22);this[_0xe9f0[32]]()};Orbit[_0xe9f0[8]][_0xe9f0[35]]= function(_0x6bc0x21){if(this[_0xe9f0[4]]== null){throw _0xe9f0[36]};var _0x6bc0x24=this[_0xe9f0[14]](this[_0xe9f0[4]]);this[_0xe9f0[5]]= _0x6bc0x21;var _0x6bc0x25=this[_0xe9f0[14]](this[_0xe9f0[4]]);return Math[_0xe9f0[24]](_0x6bc0x25- _0x6bc0x24);this[_0xe9f0[32]]()};Orbit[_0xe9f0[8]][_0xe9f0[32]]= function(){if(this[_0xe9f0[5]]!= null&& this[_0xe9f0[4]]!= null){if(this[_0xe9f0[5]]< this[_0xe9f0[4]]){var _0x6bc0x26=this[_0xe9f0[4]];this[_0xe9f0[4]]= this[_0xe9f0[5]];this[_0xe9f0[5]]= _0x6bc0x26}};this[_0xe9f0[37]]()};Orbit[_0xe9f0[8]][_0xe9f0[37]]= function(){if(this[_0xe9f0[6]]){if(this[_0xe9f0[5]]!= null){this[_0xe9f0[6]][_0xe9f0[5]]= this[_0xe9f0[1]][_0xe9f0[5]];this[_0xe9f0[6]][_0xe9f0[4]]= this[_0xe9f0[1]][_0xe9f0[4]]};this[_0xe9f0[6]][_0xe9f0[37]]()}};function OrbitStack(){this[_0xe9f0[38]]= []}OrbitStack[_0xe9f0[8]][_0xe9f0[39]]= function(_0x6bc0x28){if(this[_0xe9f0[38]][_0xe9f0[40]]== 0){if(_0x6bc0x28[_0xe9f0[1]]!= planetData[_0xe9f0[41]]){throw _0xe9f0[42]}}else {if(this[_0xe9f0[38]][this[_0xe9f0[38]][_0xe9f0[40]]- 1][_0xe9f0[1]]!= _0x6bc0x28[_0xe9f0[1]][_0xe9f0[6]]){throw _0xe9f0[43]+ _0x6bc0x28[_0xe9f0[1]][_0xe9f0[44]]+ _0xe9f0[45]+ this[_0xe9f0[38]][this[_0xe9f0[38]][_0xe9f0[40]]- 1][_0xe9f0[1]][_0xe9f0[44]]+ _0xe9f0[46]}};if(this[_0xe9f0[38]][_0xe9f0[40]]> 0){_0x6bc0x28[_0xe9f0[6]]= this[_0xe9f0[38]][this[_0xe9f0[38]][_0xe9f0[40]]- 1]};this[_0xe9f0[38]][_0xe9f0[47]](_0x6bc0x28)};OrbitStack[_0xe9f0[8]][_0xe9f0[7]]= function(){var _0x6bc0x3= new OrbitStack();for(var i=0;i< this[_0xe9f0[38]][_0xe9f0[40]];i++){_0x6bc0x3[_0xe9f0[39]](this[_0xe9f0[38]][i][_0xe9f0[7]]())};return _0x6bc0x3};OrbitStack[_0xe9f0[8]][_0xe9f0[48]]= function(){if(this[_0xe9f0[38]][_0xe9f0[40]]> 0){return this[_0xe9f0[38]][this[_0xe9f0[38]][_0xe9f0[40]]- 1]}else {return null}};for(var i=0;i< planetData[_0xe9f0[49]][_0xe9f0[40]];i++){var planet=planetData[_0xe9f0[49]][i];if(planet[_0xe9f0[6]]!= null){planet[_0xe9f0[23]]=  new Orbit(planet[_0xe9f0[6]]);planet[_0xe9f0[23]][_0xe9f0[31]](planet[_0xe9f0[4]]);planet[_0xe9f0[23]][_0xe9f0[29]](planet[_0xe9f0[5]])}else {planet[_0xe9f0[23]]= null}}
+"use strict";
+
+function Orbit(planet){
+	this.planet = planet;
+	this.mu = G * this.planet.mass;
+	this.periapsis = null;
+	this.apoapsis = null;
+	this.primary = null;
+}
+
+Orbit.prototype.clone = function(){
+	var ret = new Orbit(this.planet);
+	ret.periapsis = this.periapsis;
+	ret.apoapsis = this.apoapsis;
+	return ret;
+}
+
+/*Orbit.prototype.recalculateDependantVariables = function(){
+	var focus = this.periapsis + this.planet.radius;
+	if(this.apoapsis != null && this.periapsis != null){
+		//Elliptical/circular orbit.
+		this.majorAxis = this.focus + (this.apoapsis + this.planet.radius);
+	}
+	else if(this.apoapsis != null){
+		//Sub-orbit. Don't think it will happen.
+		throw "Can't calculate major axis during sub-orbital flight. Not implemented.";
+	}
+	else if(this.periapsis != null){
+		//Hyperbolic orbit.
+		//var eccentricity = ???;
+		//var semiLatusRectum = ???;
+		//this.majorAxis = 2 * semiLatusRectum / (1 - eccentricity ^ 2); //Don't do that.
+		//this.majorAxis = -2 * this.periapsis; //x^2/a^2 + y^2/b^2 = 1 for y = 0 yields x = a, right? It's also negative.
+		//I give up on this. Hyperbolic trajectories are too much work for this silly app. I'll assume, instead, that we always have parabolic trajectories.
+		//That means majorAxis doesn't matter.
+		this.majorAxis = null;
+	}
+	
+	//this.fociDistance = this.majorAxis - this.focus * 2;
+	//this.minorAxis = Math.sqrt(this.majorAxis * this.majorAxis - this.fociDistance * this.fociDistance);
+}*/
+
+/*Orbit.prototype.setSpeed = function(speed, angleFromPeriapsis){
+	
+}*/
+
+/*Orbit.prototype.getSpeed = function(angleFromPeriapsis){
+	
+}*/
+
+/*
+EG:
+(6.674e-11 * 5.2915793E22 * ((2 / (75768 + 600000)) - (2 / (70916 + 600000 + (75912 + 600000)))))^0.5
+
+
+*/
+
+Orbit.prototype.setApoapsisFromSpeed = function(s, d){
+	if(s > this.getEscapeVelocityAtDistance(d)){
+		this.apoapsis = null;
+	}
+	else{
+		var focus = this.periapsis + this.planet.radius;
+		this.apoapsis = - focus - this.planet.radius - 2 / ((s * s / (G * this.planet.mass)) - (2 / (d + this.planet.radius)));
+	}
+}
+
+Orbit.prototype.getRadialSpeedVectorAtAltitude = function(altitude){
+	if(this.apoapsis != null && altitude >= this.apoapsis) throw "Altitude for this calculation cannot be higher than apoapsis.";
+	var dR = altitude + this.planet.radius;
+	var cR = this.periapsis + this.planet.radius;
+	var hSpeed = this.getSpeedAtDistance(this.periapsis);
+	var vSpeed = 0;
+	var oldHSpeed = hSpeed;
+	var oldVSpeed = vSpeed;
+	var dt = 1;//precision.
+	while(cR < dR){ //I know there's a way to solve this using calculus, but the project is already past its deadline.
+		
+	
+		var vG = -(dt * (G * this.planet.mass) / (cR * cR)); 
+		//var aC = avgHSpeed * avgHSpeed / distanceFromPlanetCenter; 
+		//var vC = aC * dt;
+		vSpeed += vG;
+		var avgHSpeed = (hSpeed + oldHSpeed) * 0.5;
+		var avgVSpeed = (vSpeed + oldVSpeed) * 0.5;
+		var d_v = avgVSpeed * dt;
+		var d_h = avgHSpeed * dt;
+		var theta = Math.atan2(d_h, d_v + cR);
+		
+		cR = Math.sqrt((cR + d_v) * (cR + d_v) + d_h * d_h)
+		
+		//Rotate velocity vector.
+		var tempVectorX = hSpeed;
+		var tempVectorY = vSpeed;
+		hSpeed = tempVectorX * Math.cos(theta) - tempVectorY * Math.sin(theta);
+		vSpeed = tempVectorY * Math.cos(theta) + tempVectorX * Math.sin(theta);
+		
+		oldHSpeed = hSpeed;
+		oldVSpeed = vSpeed;
+	}
+	return [hSpeed, vSpeed];
+}
+
+Orbit.prototype.getSpeedAtDistance = function(r){
+	if(this.apoapsis != null && this.periapsis != null){
+		//Elliptical/circular orbit.
+		var focus = this.periapsis + this.planet.radius;
+		var majorAxis = focus + (this.apoapsis + this.planet.radius);
+		return Math.sqrt(G * this.planet.mass * ((2 / (r + this.planet.radius)) - (2 / (majorAxis))));
+	}
+	else if(this.periapsis != null){
+		//Parabolic/hyperbolic flight.
+		return Math.sqrt(2 * G * this.planet.mass / (r + this.planet.radius)) + this.getHyperbolicExcessVelocity();
+	}
+	else if(this.apoapsis != null){
+		//Sub-orbit. Don't think it will happen.
+		throw "Can't calculate speed during sub-orbital flight. Not implemented.";
+	}
+}
+
+Orbit.prototype.getEscapeVelocityAtDistance = function(d){
+	if(this.periapsis == null)
+		throw "Cannot calculate escape velocity when periapsis is not defined.";
+	
+	//return Math.sqrt(2 * this.planet.g * (this.planet.radius + d)); //This doesn't work because g changes based on r. Use the following equation instead...
+	return Math.sqrt(2 * G * this.planet.mass / (this.planet.radius + d));
+}
+
+Orbit.prototype.getHyperbolicExcessVelocity = function(){
+	if(this.primary == null){
+		//Orbiting or exiting the sun. Either way, this calculator doesn't consider hyperbolic solar orbits.
+		return 0;
+	}
+	else{
+		if(this.apoapsis != null){
+			//In stable orbit.
+			return 0;
+		}
+		else{
+			//In hyperbolic orbit. Get speed at primary.
+			var speedWrtPrimary = this.primary.getSpeedAtDistance(this.planet.aveapsis);
+			var speedOfPrimary = this.planet.orbit.getSpeedAtDistance(this.planet.aveapsis);
+			var excess = Math.abs(speedWrtPrimary - speedOfPrimary);
+			var localDv = this.translateParentDvToLocalDv(excess);
+			return localDv;
+		}
+	}
+}
+
+Orbit.prototype.translateParentDvToLocalDv = function(vi){
+	//Quadratir equation (don't ask).
+	if(this.periapsis == null)
+		throw "Cannot effect a parent dv during sub-orbital flights.";
+	var ve = this.getEscapeVelocityAtDistance(this.periapsis);
+	return Math.sqrt(ve * ve + vi * vi) - ve;
+}
+	
+Orbit.prototype.effectParentDv = function(vi){
+	var dv = this.translateParentDvToLocalDv(vi);
+	//TODO: get rid of the return, and instead make the necessary changes up the orbit stack.
+	//TODO: then find out where this code is used, and make sure they don't muck around with the stack.
+	return dv;
+}
+
+Orbit.prototype.escape = function(){
+	if(this.apoapsis == null){
+		return 0;
+	}
+	else if(this.periapsis != null){
+		var ve = this.getEscapeVelocityAtDistance(this.periapsis);
+		var vp = this.getSpeedAtDistance(this.periapsis);
+		var dv = ve - vp;
+		this.setApoapsis(null);
+		return dv;
+	}
+	else{
+		throw "Can't escape if periapsis is not defined. Correct orbit first.";
+	}
+}
+
+Orbit.prototype.setPeriapsis = function(value){
+	this.periapsis = value;
+	//this.recalculateDependantVariables();
+	this.fixApses();
+}
+
+Orbit.prototype.setApoapsis = function(value){
+	this.apoapsis = value;
+	//this.recalculateDependantVariables();
+	this.fixApses();
+}
+
+//Requires that there is an apoapsis.
+Orbit.prototype.setPeriapsisViaApoapsis = function(value){
+	if(this.apoapsis == null){
+		throw "Cannot set periapsis via apoapsis for hyperbolic flights. Just set it directly.";
+	}
+	var apoV = this.getSpeedAtDistance(this.apoapsis);
+	this.periapsis = value;
+	//this.recalculateDependantVariables();
+	var newApoV = this.getSpeedAtDistance(this.apoapsis);
+	
+	return Math.abs(newApoV - apoV);
+	this.fixApses();
+}
+
+Orbit.prototype.setApoapsisViaPeriapsis = function(value){
+	if(this.periapsis == null){
+		throw "Cannot set apoapsis via periapsis for sub-orbital flights.";
+	}
+	var periV = this.getSpeedAtDistance(this.periapsis);
+	this.apoapsis = value;
+	//this.recalculateDependantVariables();
+	var newPeriV = this.getSpeedAtDistance(this.periapsis);
+	
+	return Math.abs(newPeriV - periV);
+	this.fixApses();
+}
+
+Orbit.prototype.fixApses = function(){
+	if(this.apoapsis != null && this.periapsis != null){
+		if(this.apoapsis < this.periapsis){
+			var x = this.periapsis;
+			this.periapsis = this.apoapsis;
+			this.apoapsis = x;
+		}
+	}
+	this.fixParentOrbits();
+}
+
+//If the current orbit has a set apoapsis, set the orbit of partents.
+Orbit.prototype.fixParentOrbits = function(){
+	if(this.primary){
+		if(this.apoapsis != null){
+			this.primary.apoapsis = this.planet.apoapsis;
+			this.primary.periapsis = this.planet.periapsis;
+		}
+		this.primary.fixParentOrbits();
+	}
+	
+}
+
+//ORBIT STACKS.
+
+function OrbitStack(){
+	this.stack = [];
+}
+
+OrbitStack.prototype.addOrbit = function(orbit){
+	if(this.stack.length == 0){
+		if(orbit.planet != planetData.kerbol) throw "The top planet in the orbit stack must be Kerbol.";
+	}
+	else{
+		if(this.stack[this.stack.length - 1].planet != orbit.planet.primary) throw "" + orbit.planet.name + " does not orbit " + this.stack[this.stack.length - 1].planet.name + "."
+	}
+	
+	if(this.stack.length > 0){
+		orbit.primary = this.stack[this.stack.length - 1];
+	}
+	this.stack.push(orbit);
+}
+
+OrbitStack.prototype.clone = function(){
+	var ret = new OrbitStack();
+	for(var i = 0; i < this.stack.length; i++){
+		ret.addOrbit(this.stack[i].clone());
+	}
+	return ret;
+}
+
+OrbitStack.prototype.currentOrbit = function(){
+	if(this.stack.length > 0){
+		return this.stack[this.stack.length - 1];
+	}
+	else{
+		return null;
+	}
+}
+
+//PLANET Orbits
+
+for(var i = 0; i < planetData.list.length; i++){
+	var planet = planetData.list[i];
+	if(planet.primary != null){
+		planet.orbit = new Orbit(planet.primary);
+		planet.orbit.setPeriapsis(planet.periapsis);
+		planet.orbit.setApoapsis(planet.apoapsis);
+	}
+	else{
+		planet.orbit = null;
+	}
+}
+
+
+
+
+
+
+
+
+

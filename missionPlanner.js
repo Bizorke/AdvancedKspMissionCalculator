@@ -210,7 +210,7 @@ function updateMissionPlannerView(){
 				if(mySatellites.length > 0){
 					DOT.do("#missionoptions")
 					.div().class("missionoption flybyobjective").do()
-					.h4("Fly to " + objectType).title("Note that you can have any periapsis you want when you arrange a flyby, so this objective makes no assumptions about that until the next objective is added.")
+					.h4("Fly to " + objectType).title("Note that you can have any periapsis you want when you arrange a flyby, so this objective makes no assumptions about that until the next objective is added. If the target planet is already at your periapsis or apoapsis, this doesn't use fuel - it waits for a window. Add Delta V if you want a little more control.")
 					.label(objectType + ": ").for("flytoplanet")
 					.select().id("flytoplanet").class("form-control").onchange("")
 					.do()
@@ -220,8 +220,8 @@ function updateMissionPlannerView(){
 						})
 					.end()
 					.br()
-					.input().id("flybyfixinclination").type("checkbox").checked("checked").label(" Fix Inclination").for("flybyfixinclination").title("It is theoretically possible to intercept any satellite, regardless of inclination, given enough time. However you should try to align inclinations to make life easier. The simulator also assumes that spacecraft will accumulate a small amount of inclination error during blastoff, but not during flyby missions since there should be ample time to fix your inclination cheaply before you reach the target.")
-					.br()
+					/*.input().id("flybyfixinclination").type("checkbox").checked("checked").label(" Fix Inclination").for("flybyfixinclination").title("It is theoretically possible to intercept any satellite, regardless of inclination, given enough time. However you should try to align inclinations to make life easier. The simulator also assumes that spacecraft will accumulate a small amount of inclination error during blastoff, but not during flyby missions since there should be ample time to fix your inclination cheaply before you reach the target.")
+					.br()*/
 					.input().class("btn-default").type("button").value("Add Objective").onclick("addFlyByObjective();")
 					.end();
 				}
@@ -262,12 +262,18 @@ function updateMissionPlannerView(){
 				.end();
 			}
 			
-			DOT.do("#missionoptions").div().class("missionoption cargoobjective").do()
-				.h4("Add/Remove Cargo").title("Add or remove payload mass. Use this to make calculations regarding towing asteroids, or accounting for mass changes due to deployed rovers, etc. Positive means you're adding mass, negative means you're subtracting mass.")
-				.label("Mass: ").for("cargochangemass").input().id("cargochangemass").class("form-control").type("number").step("0.1").value(0).span().class("units").do().h(" T").end()
-				.br()
-				.input().class("btn-default").type("button").value("Add Objective").onclick("addCargoObjective();")
-			.end();
+			DOT.do("#missionoptions")
+				.div().class("missionoption cargoobjective").do()
+					.h4("Add/Remove Cargo").title("Add or remove payload mass. Use this to make calculations regarding towing asteroids, or accounting for mass changes due to deployed rovers, etc. Positive means you're adding mass, negative means you're subtracting mass.")
+					.label("Mass: ").for("cargochangemass").input().id("cargochangemass").class("form-control").type("number").step("0.1").value(0).span().class("units").do().h(" T").end()
+					.br()
+					.input().class("btn-default").type("button").value("Add Objective").onclick("addCargoObjective();")
+				.end()
+			.end()
+			.div().id("refuelobjective").class("missionoption refuelobjective").style($("#force-ssto").is(':checked') && $("#force-ss").is(':checked') ? "" : "display: none;").do()
+				.h4("Refuel").title("Refuel every stage of the current rocket to 100%. Only works for single-stage rockets, otherwise the missions get too complicated to optimize.")
+				.input().class("btn-default").type("button").value("Add Objective").onclick("addRefuelObjective();")
+			.end()
 			
 
 			
@@ -372,6 +378,10 @@ function addCargoObjective(){
 		var cargon = (cargo - 0) * 1000;
 		addMissionObjectiveNode({action: "cargo", message: (cargon >= 0 ? "Add" : "Remove") + " " + readableMass(Math.abs(cargon)) + " of cargo.", cargo: cargon});
 	}
+}
+
+function addRefuelObjective(){
+	addMissionObjectiveNode({action: "refuel", message: "Refuel vessel."});
 }
 
 function removeLastObjective(){
