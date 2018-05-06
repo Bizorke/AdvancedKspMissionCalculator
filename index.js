@@ -442,6 +442,7 @@ $(function(){
 	
 	initializeMission();
 	(adsbygoogle = window.adsbygoogle || []).push({}); //GOOGLE ADS.
+	var script = document.createElement('script');script.src = "https://apis.google.com/js/platform.js";(document.head||document.documentElement).appendChild(script);
 });
 
 /*function dragAreaSelector(id){
