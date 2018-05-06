@@ -78,7 +78,7 @@ $(function(){
 	DOT
 		.div().id("formcontainer").class("container").do()
 			.br().br().h("<a href=\"https://twitter.com/joshsideris\" class=\"twitter-follow-button\" data-show-count=\"false\">Follow @joshsideris</a>")
-			.div().class("g-ytsubscribe").data("channel", "Bizorke").data("layout", "full").data("theme", "dark").data("count", "hidden")
+			.div().class("g-ytsubscribe").data("channel", "Bizorke").data("layout", "full").data("count", "hidden")
 			.br().br().b("Bizorke's")
 			.h1().do().h("Advanced Kerbal Space Program Mission Calculator").br().i("Rocket Designer <b>&bull;</b> Mission Planner <b>&bull;</b> Parachute / Heat Shield / Aerocapture Calculator <b>&bull;</b> Simulator").class("subtitle").end()
 				.a("Version " + VERSION).href("./changes.html").target("_blank")
